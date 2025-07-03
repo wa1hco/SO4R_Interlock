@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Interlock")(type "KiCad")(uri "${KIPRJMOD}/Interlock.pretty")(options "")(descr ""))
+)

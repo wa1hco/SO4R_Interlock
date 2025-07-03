@@ -1,33 +1,31 @@
-# Gradle files
-.gradle/
-build/
+# For PCBs designed using KiCad: https://www.kicad.org/
+# Format documentation: https://kicad.org/help/file-formats/
 
-# Local configuration file (sdk path, etc)
-local.properties
+# Backups
+SO4R_Interlock-backups/
+*.bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-backups
+*.sch-bak
+# Temporary files
+*.000
 
-# Log/OS Files
-*.log
+*.kicad_prl
+*~
+_autosave-*
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
 
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.apk
-output-metadata.json
+# Netlist files (exported from Eeschema)
+*.net
 
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
+# Autorouter files (exported from Pcbnew)
+*.dsn
+*.ses
 
-# Keystore files
-*.jks
-*.keystore
-
-# Google Services (e.g. APIs or Firebase)
-google-services.json
-
-# Android Profiling
-*.hprof
+# Exported BOM files
+*.xml
+*.csv

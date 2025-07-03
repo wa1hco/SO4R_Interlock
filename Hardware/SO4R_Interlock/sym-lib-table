@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Interlock")(type "KiCad")(uri "${KIPRJMOD}/Interlock.kicad_sym")(options "")(descr ""))
+)
