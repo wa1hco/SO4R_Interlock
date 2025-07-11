@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../../PlatformIO/Projects/SO4R_Interlock_SW"
+		},
+		{
+			"path": "../../../Sketchbook/Tiny_Sequencer"
+		}
+	],
+	"settings": {}
+}
