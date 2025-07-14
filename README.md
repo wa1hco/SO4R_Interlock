@@ -1,8 +1,10 @@
 # SO4R_Interlock
 The interlock manages up to 4 radios for a contesting scenario
+
 Baseline capability for one SSB/CW radio plus 3 WSJTX radios.
 Antenna separation is sufficient to allow reception when other radio is transmitting
 SSB/CW radio has an amplifier and rotatable antenna
+
 Each of three WSJTx instances have radio, amplifier, and antenna (generally fixed)
 WSJTX operator monitors list of available stations and may click ENABLE transmission
 Each of 4 radio have a priority with SSB/CW being highest
