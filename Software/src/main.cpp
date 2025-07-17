@@ -1,128 +1,198 @@
 // SO4R Interlock control program
 // Function
 //   Multiple radios interoperating on the same band
-//   Initially, one SSB/CW radio, 3 WSJTX radios
-//   WSTTX radios listen on 3 wide spaced antenna
-//   SSB/CW operation does not interfere with WSJTX
+//   Baseline, one SSB/CW radio, up to 3 WSJTX radios
+//   WSJTX radios listen on 3 wide spaced antenna, separte directions
+//   3 radios can hear when 1 radio transmitting
+//   Only one radio can transmit at a time
 //   SSb/CW operation has priority and can instantlly inhibit WSJTX TX
-//   SSB/CW perator monitors stations heard list from all WSJTX
-//   Interlock ensures 
-//      only one signal transmitted at a time
-//      Stay with contest rules
-//      Sequencing to prevent hot switching
-//   Single transmitting radio is routed through a single amplifier
+//   WSJTX radios listen in 3 directions
+//   WSJTX sends stations heard to combined list for review by SSB/CW op
+//   Interlock detects SSB/CW Tx by reading KEY line from radio
+//   Interlock detects WSJTX Tx by reading RTS line from USB interface
 
-// Hardware description
-// 4 USB serial ports that receive RTS from computer
-// 4 Radio control ports that support 
-// Control of 4 transfer relays, dual 4:1 selectors
-//   Connect radio to antenna on Rx, amplifier on Tx
+// Interlock ensures 
+//   only one signal transmitted at a time
+//   Stay within ARRL VHF contest rules
+//   Sequencing to prevent hot switching
+// Transmitting radio is routed through a single amplifier
 
-// Interface to radio
-//   PTT to radio
-//   KEY from radio (indicates transmit)
-//   Spare input or output (microprocessor logic levels)
-//   3 CAT interfaces
+// Interlock hardware description
+//   4 USB serial ports that support CAT and RTS
+//   4 Radio control ports that support PTT, KEY, CAT, Spare
+//   4 relay control ports for transfer relays and dual 4:1 Mux (for amplifier)
 
-// Control relays with signals that select transfer, amp input, amp output
+// Interlock software description
+//   Read RTS (Tx requests) and KEY {radio Tx'ing}
+//   Compute Priority, 0 Rx (no Tx), 1 SSB/CW, 2, 3, 4 WSJTX
+//   if RTS or KEY, assert PTT and Relay to highest priority radio
 
-
-#include <Arduino.h>
-#include "HardwareConfig.h"
-
-// put function declarations here:
-
-short Priority;
-short PrevPriority;
+#include <HardwareConfig.h>
 
 void setup() {
-  // put your setup code here, to run once:
-
-  Priority     = 0;     // 0 - Rx, 1 to 4 Tx
-  PrevPriority = 0; 
   
-  InitPins();
+  ConfigPins(); // configure the I/O pins
+ 
+  // all Tx off
+  digitalWrite(   PTT1PIN, false);  // Radio 1 PTT, generally not used
+  digitalWrite(   PTT2PIN, false);  // Radio 2 PTT
+  digitalWrite(   PTT3PIN, false);  // Radio 3 PTT
+  digitalWrite(   PTT4PIN, false);  // Radio 4 PTT
+
+  // all relays off
+  digitalWrite(   RLY1PIN, false);  // Priority 1 Relays, SSB/CW radio
+  digitalWrite(   RLY2PIN, false);  // Priority 2 Relays, WSJTX radio
+  digitalWrite(   RLY3PIN, false);  // Priority 3 Relays, WSJTX radio
+  digitalWrite(   RLY4PIN, false);  // Priority 4 Relays, WSJTX radio
+
+  // all LEDs on RJ45 off
+  digitalWrite( TX1LEDPIN, false);
+  digitalWrite(INH1LEDPIN, false);
+  digitalWrite( TX2LEDPIN, false);
+  digitalWrite(INH2LEDPIN, false);
+  digitalWrite( TX3LEDPIN, false);
+  digitalWrite(INH3LEDPIN, false);
+  digitalWrite( TX4LEDPIN, false);
+  digitalWrite(INH4LEDPIN, false);
+
+  // all CTS pins not asserted
+  digitalWrite(  CTS1nPIN, true);  
+  digitalWrite(  CTS2nPIN, true);
+  digitalWrite(  CTS3nPIN, true);
+  digitalWrite(  CTS4nPIN, true);
 }
+
+// Inputs
+//   RTS\ from USB, when WSJTX wants to transmit
+//   KEY\ from radio, when radio keyed by PTT or manually
+// Outputs
+//   PTT to radio, when needing to transmit and highest priority
+//   RLYn to relays, when controlling which radio uses amplifier
+//   TX LED, on RJ45 connector for each radio interface, indicates TX and has amplifier
+//   INH LED, on RJ45 connector for each radio interface, indicates wants to TX but not highest priority
+// Operation
+//   Read RTS and KEY IO and save to variables for speed
+//   Compute the Priority from all Tx requests
+//   Assert PTT to radio if RTS asserted and highest priority
+//   Assert RLY to relays if KEY asserted and highest priority
+//   Assert TX led to radio interface if KEY and highest priority 
+//   Assert Inhibit LED to radio interface if KEY asserted and not highest priority
+
+// Explicit sequencing operation not need in Interlock
+//   Rx to Tx
+//     On assertion of PTT, KEY output from radio asserted immediately
+//     Radio delays RF output to allow relays connected to KEY to operate
+//     Interlock picks up PTT or KEY and immediately asserts relays
+//     Relays controlled by Interlock are no different from conventional amplifier
+//     Radio delays RF, so no sequencing steps needed for Rx to Tx
+//   Tx to Rx
+//     On release of PTT, RF generation stops immediately
+//     RF passing through 2.5 KHz filters is delayed less than 1 msec
+//     KEY released immediately
+//     Interlock releases relays immediately
+//     Relays hold for few msec, so not hot switched on release of PTT
+
+// Timing of Interlock software
+//   On every pass through loop() function
+//     Read PTT and KEY signals and save to variables
+//     Interrupts masked during read to make state of variables as consistent as possible
+//     Interlock sees new transmit signal in less than 20 usec (TBD)
+//     Interlock asserts transfer relay and 4:1 mux immediately
+//   Determine priority from both RTS and KEY signals
+//     0 means Rx, 1 for SSB/CW, 2, 3, 4 for WSJTX
+//   Copy RTS signal from COM port to PTT, masked by priority
+//     If no RTS asserted, PTT released
+//     If RTS asserted, but not highest priority, PTT released
+//     If RTS asserted and highest priority, corresponding PTT asserted
+//   Copy Priority signal from radio to relays
+//     if lower priority, set relays to RX
+//     if highest priority, set relays to TX
+//   Benefits of this algorithm
+//     Priority determined from both RTS and KEY
+//       Priority goes up immediately when high priority RTS appears
+//     RTS can immediately control PTT 
+//       RTS assertion at highest priority immediately asserts PTT
+//       RTS assertion at highest priority also updates priority
+//       RTS release immediately releases PTT
+//     KEY signal from radios controls relays (as intended by the radio manufacturers)
+//       KEY assertion lags PTT by 8 usec on some ICOM radios
+//       KEY release may also lag
+//       KEY release may be delayed by slow pullup of open collector design
+//       KEY may come from from manual activation of PTT, VOX, CW, Tune, etc.
+//       KEY is masked by priority and routed to each relay
+
 
 void loop() {
-  // Inputs
-  //   RTS from USB, when WSJTX wants to transmit
-  //   KEY from radio, when radio keyed manually
-  // Outputs
-  //   PTT to radio, when needing to transmit and highest priority
-  // Operation
-  //   Read RTS and KET to detect radios needing to transmit
-  //   Find highest priority radio needing to transmit
-  //     Assert corresponding transfer relay and amplifier selectors
-  //     Assert PTT to radio
-  // if lower priority radio tries to transmit
+  short Priority;
+  
+  // Read all inputs, convert from low true to high true logic
+  // Read as atomically as practicable
+  noInterrupts();
+  bool RTS1 = !digitalReadFast(RTS1nPIN);  // RTS from serial port asks for Tx
+  bool RTS2 = !digitalReadFast(RTS2nPIN);
+  bool RTS3 = !digitalReadFast(RTS3nPIN);
+  bool RTS4 = !digitalReadFast(RTS4nPIN);  
 
-  Priority = 0;
-  // Read the current state of Tx requests
-  if (digitalRead(RTS1nPIN) or !digitalRead(KEY1nPIN)) { // Radio 1 needs to transmit
-    Priority = 1;
-  } 
+  bool KEY1 = !digitalReadFast(KEY1nPIN);  // KEY from radio says Tx from RTS or manual
+  bool KEY2 = !digitalReadFast(KEY2nPIN);
+  bool KEY3 = !digitalReadFast(KEY3nPIN);
+  bool KEY4 = !digitalReadFast(KEY4nPIN);
+  interrupts();
 
-  if (digitalRead(RTS2nPIN) or !digitalRead(KEY2nPIN)) { // Radio 1 needs to transmit
-    Priority = 2;
-  } 
+  // Priority initialized to 0 (Rx)
+  // Priority 1 (highest) radio is usually SSB/CW, commanded to Tx by VOX or CW
+  // Priority 2, 3, 4 radios are usually WSJTX, commanded to Tx by RTS\
+  // Interlock also reads the KEY\ line from the radio to sense Tx
 
-  if (digitalRead(RTS3nPIN) or !digitalRead(KEY3nPIN)) { // Radio 1 needs to transmit
-    Priority = 3;
-  } 
+  // Compute Priority based on RTS and KEY inputs
+  // Priorities tested from lowest to highest
+  // Highest priority sets final value of Priority
+  // If no Tx requests, remains at 0 (Rx)
+  Priority = 0;                    // Rx mode
+  if (RTS4 or KEY4) Priority = 4;  // WSJTX radio
+  if (RTS3 or KEY3) Priority = 3;  // WSJTX radio
+  if (RTS2 or KEY2) Priority = 2;  // WSJTX radio
+  if (RTS1 or KEY1) Priority = 1;  // SSB/CW radio
 
-  if (digitalRead(RTS4nPIN) or !digitalRead(KEY4nPIN)) { // Radio 1 needs to transmit
-    Priority = 4;
-  } 
+  // Output signals in order of timing criticality
+  // Assert Tx to relay corresponding to priority set from RTS and KEY, others stay Rx
+  bool RLY1    = (Priority == 1);
+  bool RLY2    = (Priority == 2);
+  bool RLY3    = (Priority == 3);
+  bool RLY4    = (Priority == 4);
+  digitalWrite(RLY1PIN,    RLY1);
+  digitalWrite(RLY2PIN,    RLY2);
+  digitalWrite(RLY3PIN,    RLY3);
+  digitalWrite(RLY4PIN,    RLY4);
 
-  // Detect if there is a state change
-  // Cases
-  //   from Rx to Tx at any priority
-  //   from Tx to Tx at higher priority
-  //   from Tx to Rx
-  //   lower priority Tx tries to start transmit and gets inhibited
+  // Asserts Tx on radio with RTS and corresponding to priority, all others stay Rx
+  bool PTT1    = RTS1 and (Priority == 1);
+  bool PTT2    = RTS2 and (Priority == 2);
+  bool PTT3    = RTS3 and (Priority == 3);
+  bool PTT4    = RTS4 and (Priority == 4);
+  digitalWrite(PTT1PIN,    PTT1);
+  digitalWrite(PTT2PIN,    PTT2);
+  digitalWrite(PTT3PIN,    PTT3);
+  digitalWrite(PTT4PIN,    PTT4);
 
-  // Sequencing operation at radios
-  //   Rx to Tx
-  //     On assertion of PTT, KEY output from radio asserted immediately
-  //     Radio delays RF output to allow relays connected to KEY to operate
-  //   Tx to Rx
-  //     On release of PTT, RF generation stops immediately
-  //     RF passing through 2.5 KHz filters is delayed less than 1 msec
-  //     KEY released immediately
-  //     Relays hold for few msec, so not hot switched on release of PTT
+  // Assert Tx LED to RJ45 LED highest priority radio interface
+  bool TX1LED  = (Priority == 1);
+  bool TX2LED  = (Priority == 2);
+  bool TX3LED  = (Priority == 3);
+  bool TX4LED  = (Priority == 4);
+  digitalWrite(TX1LEDPIN,  TX1LED);
+  digitalWrite(TX2LEDPIN,  TX2LED);
+  digitalWrite(TX3LEDPIN,  TX3LED);
+  digitalWrite(TX4LEDPIN,  TX4LED);
 
-  // Sequencing operation of Interlock
-  //   Rx to Tx 
-  //     MCU runs in tight loop testing PTT and KEY signals for start of TX
-  //     Interlock sees new transmit signal in less than 20 usec
-  //     Interlock asserts transfer relay and 4:1 mux immediately
-  //     Relays controlled by Interlock are no different from conventional amplifier
-  //     Radio delays RF, so no sequencing steps needed for Rx to Tx
-  //   Tx to Rx
-  //     Interlock sees RTS or KEY drop
-  //     RF will drop with 1 msec
-  //     Interlock immediately drops transfer and 4:1 mux relays
-  //   Tx to higher Priority Tx
-  //     Interlock sees start of high priority Tx
-  //     For lower priority radio
-  //       Immediately drop PTT, radio stops RF within 1 msec
-  //       Immediately drop transfer relay
-  //       Immediately drop both 4:1 selectors around amplifier
-  //       RF is gone before relays have a chance to release
-  //     For the higher priority radio
-  //       Immediately assert PTT
-  //       Immediately assert transfer relay
-  //       Immediately assert both 4:1 selectors around amplifier
-  //       Radio delays start of RF for 15 msec or more, giving time for relays to close
-  //       
+  // Assert Inhibit LED to RJ45 LED if radio want Tx but not highest priority
+  bool INH2LED = (RTS2 or KEY2) and (Priority > 0) and (Priority < 2);
+  bool INH3LED = (RTS3 or KEY3) and (Priority > 0) and (Priority < 3);
+  bool INH4LED = (RTS4 or KEY4) and (Priority > 0) and (Priority < 4);
+  digitalWrite(INH2LEDPIN, INH2LED); 
+  digitalWrite(INH3LEDPIN, INH3LED);
+  digitalWrite(INH4LEDPIN, INH4LED);
 
-  if (Priority != PrevPriority) { //if priority changed
-
-  }
-
-  PrevPriority = Priority;
-
-}
+} // loop()
 
 // put function definitions here:

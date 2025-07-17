@@ -60,51 +60,57 @@
 // 48  | PA4    | PTT4     |      |       | 0,txd  |       |     |        |        |
 //-----|--------|----------|------|-------|--------|-------|-----|--------|--------|
 
+
+//      PinName     Port Name  TQFP48  Function
 // Define connections to USB Serial ports
-#define RTS4nPIN    PIN_PA7    // input, low true
-#define CTS4nPIN    PIN_PB0    // output, low true
-#define RTS3nPIN    PIN_PB1    // input, low true
-#define CTS3nPIN    PIN_PB2    // output, low true
-#define CTS2nPIN    PIN_PB3    // output, low true
-#define RTS2nPIN    PIN_PB4    // input, low true
-#define RTS1nPIN    PIN_PB5    // input, low true
-#define CTS1nPIN    PIN_PC0    // output, low true
+#define RTS1nPIN    PIN_PB5    // 13   input,  low true
+#define RTS2nPIN    PIN_PB4    // 12   input,  low true
+#define RTS3nPIN    PIN_PB1    //  9   input,  low true
+#define RTS4nPIN    PIN_PA7    //  7   input,  low true
+
+#define CTS1nPIN    PIN_PC0    // 14   output, low true
+#define CTS2nPIN    PIN_PB3    // 11   output, low true
+#define CTS3nPIN    PIN_PB2    // 10   output, low true
+#define CTS4nPIN    PIN_PB0    //  8   output, low true
 
 // Define connections to rigs
-//      PinName     Port Name  TQFP48  Function
-#define PTT1PIN     PIN_PD3    // 23   output, high true, key radio
 #define KEY1nPIN    PIN_PD2    // 22   input,  low true,  radio keyed
-#define SPR1PIN     PIN_PD1    // 21   input/output, TBD function
-#define TX1LEDPIN   PIN_PD0    // 20   output, high true, radio keyed
-#define INH1LEDPIN  PIN_PD4    // 24   output, high true, radio inhibited
-
-#define PTT2PIN     PIN_PE0    // 30
 #define KEY2nPIN    PIN_PD7    // 27 
-#define SPR2PIN     PIN_PD6    // 26
-#define TX2LEDPIN   PIN_PD5    // 25
-#define INH2LEDPIN  PIN_PE2    // 32
-
-#define PTT3PIN     PIN_PF2    // 36
 #define KEY3nPIN    PIN_PF1    // 35
-#define SPR3PIN     PIN_PF0    // 34
-#define TX3LEDPIN   PIN_PE3    // 33
-#define INH3LEDPIN  PIN_PF4    // 38
-
-#define PTT4PIN     PIN_PA4    // 48
 #define KEY4nPIN    PIN_PA3    // 47
+
+#define PTT1PIN     PIN_PD3    // 23   output, high true, key radio
+#define PTT2PIN     PIN_PE0    // 30
+#define PTT3PIN     PIN_PF2    // 36
+#define PTT4PIN     PIN_PA4    // 48
+
+#define SPR1PIN     PIN_PD1    // 21   input/output, TBD function
+#define SPR2PIN     PIN_PD6    // 26
+#define SPR3PIN     PIN_PF0    // 34
 #define SPR4PIN     PIN_PA2    // 46
+
+// Define LEDs on RJ-45 rig interface jack
+#define TX1LEDPIN   PIN_PD0    // 20   output, high true, radio keyed
+#define TX2LEDPIN   PIN_PD5    // 25
+#define TX3LEDPIN   PIN_PE3    // 33
 #define TX4LEDPIN   PIN_PF5    // 39
+
+#define INH1LEDPIN  PIN_PD4    // 24   output, high true, radio inhibited
+#define INH2LEDPIN  PIN_PE2    // 32
+#define INH3LEDPIN  PIN_PF4    // 38
 #define INH4LEDPIN  PIN_PA5    //  1
 
 // Define connection to relays
-#define TX0PIN      PIN_PC2    // 12   output, high true
 #define RLY1PIN     PIN_PC3    // 13   output, high true
-#define RLY1PIN     PIN_PC4    // 16   output, high true
-#define RLY1PIN     PIN_PC5    // 17   output, high true
-#define RLY1PIN     PIN_PC6    // 18   output, high true
+#define RLY2PIN     PIN_PC4    // 16   output, high true
+#define RLY3PIN     PIN_PC5    // 17   output, high true
+#define RLY4PIN     PIN_PC6    // 18   output, high true
+
+// Define connections to LEDs on RJ-45 relay interface JACK
+#define TX0PIN      PIN_PC2    // 12   output, high true
 #define TX1PIN      PIN_PC7    // 19   output, high true
 
 // Public function
-void InitPins();
+void ConfigPins();
 
 #endif

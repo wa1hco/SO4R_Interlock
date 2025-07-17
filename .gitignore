@@ -10,7 +10,7 @@ SO4R_Interlock-backups/
 *.sch-bak
 # Temporary files
 *.000
-
+*.lck
 *.kicad_prl
 *~
 _autosave-*
