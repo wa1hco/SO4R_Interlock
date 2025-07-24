@@ -90,12 +90,12 @@
 #define SPR4PIN     PIN_PA2    // 46
 
 // Define LEDs on RJ-45 rig interface jack
-#define TX1LEDPIN   PIN_PD0    // 20   output, high true, radio keyed
+#define TX1LEDPIN   PIN_PD0    // 20   green, output, high true, radio keyed
 #define TX2LEDPIN   PIN_PD5    // 25
 #define TX3LEDPIN   PIN_PE3    // 33
 #define TX4LEDPIN   PIN_PF5    // 39
 
-#define INH1LEDPIN  PIN_PD4    // 24   output, high true, radio inhibited
+#define INH1LEDPIN  PIN_PD4    // 24   yellow, output, high true, radio inhibited
 #define INH2LEDPIN  PIN_PE2    // 32
 #define INH3LEDPIN  PIN_PF4    // 38
 #define INH4LEDPIN  PIN_PA5    //  1
@@ -107,8 +107,8 @@
 #define RLY4PIN     PIN_PC6    // 18   output, high true
 
 // Define connections to LEDs on RJ-45 relay interface JACK
-#define TX0PIN      PIN_PC2    // 12   output, high true
-#define TX1PIN      PIN_PC7    // 19   output, high true
+#define TX0PIN      PIN_PC2    // 12   green, output, high true
+#define TX1PIN      PIN_PC7    // 19   yellow, output, high true
 
 // Public function
 void ConfigPins();

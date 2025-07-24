@@ -46,20 +46,35 @@ void setup() {
   digitalWrite(   RLY4PIN, false);  // Priority 4 Relays, WSJTX radio
 
   // all LEDs on RJ45 off
-  digitalWrite( TX1LEDPIN, false);
-  digitalWrite(INH1LEDPIN, false);
-  digitalWrite( TX2LEDPIN, false);
-  digitalWrite(INH2LEDPIN, false);
-  digitalWrite( TX3LEDPIN, false);
-  digitalWrite(INH3LEDPIN, false);
-  digitalWrite( TX4LEDPIN, false);
-  digitalWrite(INH4LEDPIN, false);
+  #define DELAY_TIME 20
+
+  for (int ii = 0; ii < 3; ii++)
+  {
+    digitalWrite(TX0PIN, true);     delay(DELAY_TIME);  digitalWrite(TX0PIN, false);     delay(DELAY_TIME);
+    digitalWrite(TX1PIN, true);     delay(DELAY_TIME);  digitalWrite(TX1PIN, false);     delay(DELAY_TIME);
+
+    digitalWrite( TX1LEDPIN, true); delay(DELAY_TIME);  digitalWrite( TX1LEDPIN, false); delay(DELAY_TIME);
+    digitalWrite(INH1LEDPIN, true); delay(DELAY_TIME);  digitalWrite(INH1LEDPIN, false); delay(DELAY_TIME);
+
+    digitalWrite( TX2LEDPIN, true); delay(DELAY_TIME);  digitalWrite( TX2LEDPIN, false); delay(DELAY_TIME);
+    digitalWrite(INH2LEDPIN, true); delay(DELAY_TIME);  digitalWrite(INH2LEDPIN, false); delay(DELAY_TIME);
+
+    digitalWrite( TX3LEDPIN, true); delay(DELAY_TIME);  digitalWrite( TX3LEDPIN, false); delay(DELAY_TIME);
+    digitalWrite(INH3LEDPIN, true); delay(DELAY_TIME);  digitalWrite(INH3LEDPIN, false); delay(DELAY_TIME);
+
+    digitalWrite( TX4LEDPIN, true); delay(DELAY_TIME);  digitalWrite( TX4LEDPIN, false); delay(DELAY_TIME);
+    digitalWrite(INH4LEDPIN, true); delay(DELAY_TIME);  digitalWrite(INH4LEDPIN, false); delay(DELAY_TIME);
+
+  }
 
   // all CTS pins not asserted
   digitalWrite(  CTS1nPIN, true);  
   digitalWrite(  CTS2nPIN, true);
   digitalWrite(  CTS3nPIN, true);
   digitalWrite(  CTS4nPIN, true);
+
+  // light the LED's to show program is alive
+  
 }
 
 // Inputs
