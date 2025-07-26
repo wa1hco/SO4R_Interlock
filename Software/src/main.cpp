@@ -199,6 +199,7 @@ void loop() {
   digitalWrite(TX2LEDPIN,  TX2LED);
   digitalWrite(TX3LEDPIN,  TX3LED);
   digitalWrite(TX4LEDPIN,  TX4LED);
+  digitalWrite(TX0PIN, (TX1LED or TX2LED or TX3LED or TX4LED));
 
   // Assert Inhibit LED to RJ45 LED if radio want Tx but not highest priority
   bool INH2LED = (RTS2 or KEY2) and (Priority > 0) and (Priority < 2);
@@ -207,6 +208,7 @@ void loop() {
   digitalWrite(INH2LEDPIN, INH2LED); 
   digitalWrite(INH3LEDPIN, INH3LED);
   digitalWrite(INH4LEDPIN, INH4LED);
+  digitalWrite(TX1PIN, (INH2LED or INH3LED or INH4LED));
 
 } // loop()
 
