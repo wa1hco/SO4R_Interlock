@@ -55,8 +55,7 @@ void setup() {
   digitalWrite( TX4LEDPIN, false);
   digitalWrite(INH4LEDPIN, false);
 
-  // all CTS pins not asserted
-  digitalWrite(  CTS1nPIN, true);  
+  // CTS\ from MCU to USB chip not asserted
   digitalWrite(  CTS2nPIN, true);
   digitalWrite(  CTS3nPIN, true);
   digitalWrite(  CTS4nPIN, true);
