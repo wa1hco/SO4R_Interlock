@@ -29,7 +29,7 @@
 // 19  | PC7    | TX1      |      |       | 1,xdir |       |     |        | 0,sda  |
 // 20  | PD0    | TX1_LED  |      |       |        | AIN0  |     |        |        |
 // 21  | PD1    | SPR1     |      |       |        | AIN1  |     |        |        |
-// 22  | PD2    | KEY1\    |      |       |        | AIN2  |     |        |        |
+// 22  | PD2    | KEY1\M   |      |       |        | AIN2  |     |        |        |
 // 23  | PD3    | PTT1     |      |       |        | AIN3  |     |        |        |
 // 24  | PD4    | INH1_LED |      |       |        | AIN4  |     |        |        |
 //-----|--------|----------|------|--=----|--------|-------|-----|--------|--------|
@@ -43,7 +43,7 @@
 // 32  | PE2    | INH2_LED |      |       | 4,XCK  | AIN10 |     | 0,sck  |        |
 // 33  | PE3    | TX3_LED  |      |       | 4,XDIR | AIN11 |     | 0,ss\  |        |
 // 34  | PF0    | SPR3     |      |       | 2,TXD  |       |     |        |        |
-// 35  | PF1    | KEY3\    |      |       | 2,RXD  |       |     |        |        |
+// 35  | PF1    | KEY3\M   |      |       | 2,RXD  |       |     |        |        |
 // 36  | PF2    | PTT3     |      |       | 2,XCK  |       |     |        | 1,SDA  |
 //-----|--------|----------|------|-------|--------|-------|-----|--------|--------|
 // 37  | PF3    |          | PF3  |       | 2,XDIR |       |     |        | 1,SCL  |
@@ -56,7 +56,7 @@
 // 44  | PA0    | TXD_M    |      |       | 0,TXD  |       |     |        |        |
 // 45  | PA1    | RXD_M    |      |       | 0,RXD  |       |     |        |        |
 // 46  | PA2    | SPR4     |      |       | 0,XCK  |       |     |        | 0,SDA  |
-// 47  | PA3    | KEY4\    |      |       | 0,XDIR |       |     |        | 0,SCL  |
+// 47  | PA3    | KEY4\M   |      |       | 0,XDIR |       |     |        | 0,SCL  |
 // 48  | PA4    | PTT4     |      |       | 0,txd  |       |     |        |        |
 //-----|--------|----------|------|-------|--------|-------|-----|--------|--------|
 
@@ -74,6 +74,7 @@
 #define CTS4nPIN    PIN_PB0    //  8   output, low true
 
 // Define connections to rigs
+//      PinName     Port Name  TQFP48  Function
 #define KEY1nPIN    PIN_PD2    // 22   input,  low true,  radio keyed
 #define KEY2nPIN    PIN_PD7    // 27 
 #define KEY3nPIN    PIN_PF1    // 35
@@ -90,6 +91,7 @@
 #define SPR4PIN     PIN_PA2    // 46
 
 // Define LEDs on RJ-45 rig interface jack
+//      PinName     Port Name  TQFP48  Function
 #define TX1LEDPIN   PIN_PD0    // 20   output, high true, radio keyed
 #define TX2LEDPIN   PIN_PD5    // 25
 #define TX3LEDPIN   PIN_PE3    // 33

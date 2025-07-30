@@ -9,7 +9,6 @@ void ConfigPins() {
   pinMode(RTS3nPIN, INPUT);
   pinMode(RTS4nPIN, INPUT);
 
-  pinMode(CTS1nPIN, OUTPUT);
   pinMode(CTS2nPIN, OUTPUT);
   pinMode(CTS3nPIN, OUTPUT);
   pinMode(CTS4nPIN, OUTPUT);
