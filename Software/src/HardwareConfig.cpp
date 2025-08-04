@@ -13,7 +13,7 @@ void ConfigPins() {
   pinMode(CTS3nPIN, OUTPUT);
   pinMode(CTS4nPIN, OUTPUT);
 
-  // RJ34 radio interface jack signals
+  // RJ45 radio interface jack signals
   pinMode(KEY1nPIN,   INPUT_PULLUP); 
   pinMode(KEY2nPIN,   INPUT_PULLUP); 
   pinMode(KEY3nPIN,   INPUT_PULLUP); 
@@ -24,10 +24,10 @@ void ConfigPins() {
   pinMode(PTT3PIN,    OUTPUT);
   pinMode(PTT4PIN,    OUTPUT);
 
-  //pinMode(SPR1PIN,    INPUT_PULLUP);
-  //pinMode(SPR2PIN,    INPUT_PULLUP);
-  //pinMode(SPR3PIN,    INPUT_PULLUP);
-  //pinMode(SPR4PIN,    INPUT_PULLUP);
+  pinMode(SPR1PIN,    INPUT_PULLUP);
+  pinMode(SPR2PIN,    INPUT_PULLUP);
+  pinMode(SPR3PIN,    INPUT_PULLUP);
+  pinMode(SPR4PIN,    INPUT_PULLUP);
 
   // RJ45 radio interface jack LEDs
   pinMode(TX1LEDPIN,  OUTPUT);
@@ -49,4 +49,10 @@ void ConfigPins() {
   // RJ45 relay interface jack LEDs 
   pinMode(TX0PIN, OUTPUT);
   pinMode(TX1PIN, OUTPUT);
+
+  // BTS5200 relay driver
+  pinMode(DSEL0PIN, OUTPUT);
+  pinMode(DSEL1PIN, OUTPUT);
+  pinMode(DENPIN,   OUTPUT);
+  pinMode(ISPIN,    INPUT);
 }
