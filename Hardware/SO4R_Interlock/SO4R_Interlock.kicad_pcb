@@ -367,7 +367,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -583,7 +583,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -799,7 +799,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1573,7 +1573,7 @@
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pintype "passive")
-			(uuid "beb77988-3d3e-44db-afd5-5e7e9fef0898")
+			(uuid "4e2680ee-ca43-433b-8a9c-5db7a858321c")
 		)
 		(pad "SH" thru_hole circle
 			(at 35.06 7.62 270)
@@ -1583,7 +1583,7 @@
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pintype "passive")
-			(uuid "beb77988-3d3e-44db-afd5-5e7e9fef0898")
+			(uuid "393cab27-d316-464a-9efd-a6f4dc59065e")
 		)
 		(pad "SH" thru_hole circle
 			(at 58.93 0.89 270)
@@ -1593,7 +1593,7 @@
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pintype "passive")
-			(uuid "beb77988-3d3e-44db-afd5-5e7e9fef0898")
+			(uuid "d1226fea-b0c1-4ee4-b4f0-9925c1ef1bb8")
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Connector_RJ.3dshapes/RJ45_Amphenol_RJHSE538X-04.wrl"
@@ -1638,7 +1638,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1841,7 +1841,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2057,7 +2057,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2248,9 +2248,10 @@
 				)
 			)
 		)
-		(property "Value" "MM3Z3V6"
+		(property "Value" "MM3Z4V7"
 			(at 0.1 1.9 180)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "0665ac6a-46d8-4d84-a9a1-fbd271505cd7")
 			(effects
 				(font
@@ -2285,7 +2286,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C116949"
+		(property "LCSC" "C118602"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2473,17 +2474,6 @@
 			(layer "F.Fab")
 			(uuid "3a377cf5-16ff-49dc-9d4f-b995f380382c")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 -1.85 180)
-			(layer "F.Fab")
-			(uuid "7146206d-1621-4da6-bd22-30a2e87cc838")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(pad "1" smd roundrect
 			(at -1.05 0 180)
 			(size 0.6 0.45)
@@ -2547,7 +2537,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2763,7 +2753,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2979,7 +2969,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3195,7 +3185,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3411,7 +3401,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3627,7 +3617,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4117,17 +4107,6 @@
 			(layer "F.Fab")
 			(uuid "19632b91-3463-4928-b4e8-6c2bb0f04a3b")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 -1.85 180)
-			(layer "F.Fab")
-			(uuid "3db6a3b6-f18c-47af-bf8f-aee953bc78e4")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(pad "1" smd roundrect
 			(at -1.05 0 180)
 			(size 0.6 0.45)
@@ -4191,7 +4170,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4442,7 +4421,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4658,7 +4637,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4851,7 +4830,7 @@
 			)
 		)
 		(property "Value" "12V"
-			(at -10.8 6.85 0)
+			(at -2.65 -3.65 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "64850801-b010-417b-bdd9-0e17f3d69453")
@@ -4862,7 +4841,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4892,7 +4871,7 @@
 		(path "/e2e096be-1b0f-4e4f-855e-14a5b73f5723")
 		(sheetname "/")
 		(sheetfile "SO4R_Interlock.kicad_sch")
-		(attr through_hole exclude_from_pos_files exclude_from_bom)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -14.02 -4.62)
 			(end -14.02 4.62)
@@ -5169,7 +5148,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5641,7 +5620,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5922,7 +5901,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6138,7 +6117,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6354,7 +6333,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6555,7 +6534,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7082,7 +7061,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7670,7 +7649,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "e304dd3c-1a1f-4f25-b57f-c5d308cc2641")
+			(uuid "4f851218-3528-48bb-9e17-d1217fcc3dbe")
 		)
 		(pad "S1" thru_hole oval
 			(at 4.32 -3.125 270)
@@ -7682,7 +7661,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "e304dd3c-1a1f-4f25-b57f-c5d308cc2641")
+			(uuid "ea91b399-ea72-4eb8-a452-a297e18c4f5c")
 		)
 		(pad "S1" thru_hole oval
 			(at 4.32 1.075 270)
@@ -7694,7 +7673,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "e304dd3c-1a1f-4f25-b57f-c5d308cc2641")
+			(uuid "f7aebbc1-7ad7-41e5-9840-797ffe3af907")
 		)
 		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_G-Switch_GT-USB-7010ASV.wrl"
@@ -8046,7 +8025,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8262,7 +8241,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8463,7 +8442,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8664,7 +8643,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8880,7 +8859,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9094,7 +9073,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9310,7 +9289,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9513,7 +9492,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9720,6 +9699,7 @@
 		(property "Value" "MM3Z3V6"
 			(at 0.1 1.9 270)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "75e1abfe-f237-437f-ae14-8bb6008970b8")
 			(effects
 				(font
@@ -9942,17 +9922,6 @@
 			(layer "F.Fab")
 			(uuid "8280aa66-f2b8-48e3-b01a-3ada69eb1cf3")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 -1.85 270)
-			(layer "F.Fab")
-			(uuid "258f0449-f2e6-44f3-92e3-e5a13fa6f2d8")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(pad "1" smd roundrect
 			(at -1.05 0 270)
 			(size 0.6 0.45)
@@ -10016,7 +9985,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10232,7 +10201,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10435,7 +10404,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10638,7 +10607,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10839,7 +10808,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11040,7 +11009,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11241,7 +11210,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11457,7 +11426,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11660,7 +11629,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11876,7 +11845,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12079,7 +12048,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12295,7 +12264,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12498,7 +12467,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -12699,7 +12668,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12915,7 +12884,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13118,7 +13087,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13319,7 +13288,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13535,7 +13504,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13751,7 +13720,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14193,7 +14162,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -14385,6 +14354,7 @@
 		(property "Value" "MM3Z3V6"
 			(at 0.1 1.9 270)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "f1ffdbcb-2477-4e5f-b9c1-87c33711b82a")
 			(effects
 				(font
@@ -14606,17 +14576,6 @@
 			)
 			(layer "F.Fab")
 			(uuid "cf01d240-50f0-4f1e-b01a-63ffa599d93e")
-		)
-		(fp_text user "${REFERENCE}"
-			(at 0 -1.85 270)
-			(layer "F.Fab")
-			(uuid "f228bf4e-10dc-40f9-850b-2d9c77fa2d63")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
 		)
 		(pad "1" smd roundrect
 			(at -1.05 0 270)
@@ -14907,7 +14866,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15108,7 +15067,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15694,7 +15653,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "dab32724-79f2-499c-ab2b-af463ad1c768")
+			(uuid "1951cd4d-d2ab-46ad-ac7d-610129603025")
 		)
 		(pad "S1" thru_hole oval
 			(at 4.32 -3.125 270)
@@ -15706,7 +15665,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "dab32724-79f2-499c-ab2b-af463ad1c768")
+			(uuid "5b02f32c-01a0-456f-a70e-001c314c5bfd")
 		)
 		(pad "S1" thru_hole oval
 			(at 4.32 1.075 270)
@@ -15718,7 +15677,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "dab32724-79f2-499c-ab2b-af463ad1c768")
+			(uuid "423f8e06-15c5-48a7-8aa0-c2a0c89c36d5")
 		)
 		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_G-Switch_GT-USB-7010ASV.wrl"
@@ -15763,7 +15722,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15979,7 +15938,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16182,7 +16141,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16637,17 +16596,6 @@
 			(layer "F.Fab")
 			(uuid "84ae8a3e-af49-4f30-874d-7648c640c463")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 -1.85 0)
-			(layer "F.Fab")
-			(uuid "13d108b8-6391-40a3-95ee-323edb98e4ba")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(pad "1" smd roundrect
 			(at -1.05 0)
 			(size 0.6 0.45)
@@ -16711,7 +16659,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16914,7 +16862,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17130,7 +17078,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17333,7 +17281,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17536,7 +17484,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17739,7 +17687,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -17940,7 +17888,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18445,7 +18393,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18636,9 +18584,10 @@
 				)
 			)
 		)
-		(property "Value" "MM3Z3V6"
+		(property "Value" "MM3Z4V7"
 			(at 0.1 1.9 180)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "17cd0028-6a3a-4e24-8f68-e9f669b7e14c")
 			(effects
 				(font
@@ -18673,7 +18622,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C116949"
+		(property "LCSC" "C118602"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18861,17 +18810,6 @@
 			(layer "F.Fab")
 			(uuid "fa37e769-bfda-4594-ac90-d5af71f15130")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 -1.85 180)
-			(layer "F.Fab")
-			(uuid "539eadca-9d38-450b-b625-6b5329ed69b7")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(pad "1" smd roundrect
 			(at -1.05 0 180)
 			(size 0.6 0.45)
@@ -18935,7 +18873,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19151,7 +19089,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19367,7 +19305,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19583,7 +19521,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19786,7 +19724,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -20396,6 +20334,7 @@
 		(property "Value" "MM3Z3V6"
 			(at 0.1 1.9 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "1f077a3f-fa91-4f90-8b95-b5c6230eaf71")
 			(effects
 				(font
@@ -20617,17 +20556,6 @@
 			)
 			(layer "F.Fab")
 			(uuid "c6119058-e73d-4e23-a0a1-5f84c3cc6b85")
-		)
-		(fp_text user "${REFERENCE}"
-			(at 0 -1.85 90)
-			(layer "F.Fab")
-			(uuid "c4ca8d0a-a73c-4923-a94d-c177ef4387a1")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
 		)
 		(pad "1" smd roundrect
 			(at -1.05 0 90)
@@ -20948,7 +20876,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21164,7 +21092,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21367,7 +21295,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -21568,7 +21496,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21771,7 +21699,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21987,7 +21915,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22194,6 +22122,7 @@
 		(property "Value" "MM3Z3V6"
 			(at 0.1 1.9 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "5edf613a-a348-461f-97b4-82818c8449ab")
 			(effects
 				(font
@@ -22415,17 +22344,6 @@
 			)
 			(layer "F.Fab")
 			(uuid "a0eb8e85-305c-4aea-94c4-16be885b6330")
-		)
-		(fp_text user "${REFERENCE}"
-			(at 0 -1.85 90)
-			(layer "F.Fab")
-			(uuid "93dfa497-e31b-4cbb-a9a8-89bcb1f865a7")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
 		)
 		(pad "1" smd roundrect
 			(at -1.05 0 90)
@@ -23447,7 +23365,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -23648,7 +23566,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23864,7 +23782,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24293,7 +24211,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24544,7 +24462,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24747,7 +24665,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25326,7 +25244,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25918,7 +25836,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -26121,7 +26039,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -26337,7 +26255,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -26538,7 +26456,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -26752,7 +26670,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -26955,7 +26873,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -27156,7 +27074,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27359,7 +27277,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -27560,7 +27478,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -27749,9 +27667,10 @@
 				)
 			)
 		)
-		(property "Value" "MM3Z3V6"
+		(property "Value" "MM3Z4V7"
 			(at 0.1 1.9 180)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "aff51a94-ce43-4509-9f94-84728f99e206")
 			(effects
 				(font
@@ -27786,7 +27705,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C116949"
+		(property "LCSC" "C118602"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27974,17 +27893,6 @@
 			(layer "F.Fab")
 			(uuid "8b1ee1b3-5e8a-4df9-b180-630b142df107")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 -1.85 180)
-			(layer "F.Fab")
-			(uuid "85aab681-cd90-4bea-b757-ceb93fb573cf")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(pad "1" smd roundrect
 			(at -1.05 0 180)
 			(size 0.6 0.45)
@@ -28048,7 +27956,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28249,7 +28157,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -28452,7 +28360,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28653,7 +28561,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -28856,7 +28764,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -29059,7 +28967,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -29273,7 +29181,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -29489,7 +29397,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -30010,7 +29918,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -30226,7 +30134,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -30812,7 +30720,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "af4763b2-974e-43dc-807b-2371d1a47f03")
+			(uuid "30d52b2a-0023-4423-b9b0-996aa6220658")
 		)
 		(pad "S1" thru_hole oval
 			(at 4.32 -3.125 270)
@@ -30824,7 +30732,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "af4763b2-974e-43dc-807b-2371d1a47f03")
+			(uuid "03c862f9-b6a3-4df3-b6c4-84e9af9bff48")
 		)
 		(pad "S1" thru_hole oval
 			(at 4.32 1.075 270)
@@ -30836,7 +30744,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "af4763b2-974e-43dc-807b-2371d1a47f03")
+			(uuid "df860894-1283-4eb4-859c-89961a627505")
 		)
 		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_G-Switch_GT-USB-7010ASV.wrl"
@@ -30881,7 +30789,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -31095,7 +31003,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -31309,7 +31217,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -31512,7 +31420,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32100,7 +32008,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "796db4ae-699c-45cf-9791-2e217a785c8f")
+			(uuid "8178db0a-fbe6-4243-8c6c-da2183051dea")
 		)
 		(pad "S1" thru_hole oval
 			(at 4.32 -3.125 270)
@@ -32112,7 +32020,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "796db4ae-699c-45cf-9791-2e217a785c8f")
+			(uuid "42c5078e-016e-4195-a563-14aa593abe93")
 		)
 		(pad "S1" thru_hole oval
 			(at 4.32 1.075 270)
@@ -32124,7 +32032,7 @@
 			(net 1 "GND")
 			(pinfunction "SHIELD")
 			(pintype "passive")
-			(uuid "796db4ae-699c-45cf-9791-2e217a785c8f")
+			(uuid "9b29b72a-2462-4526-a23e-4bb29d25caa4")
 		)
 		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_G-Switch_GT-USB-7010ASV.wrl"
@@ -32169,7 +32077,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32385,7 +32293,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32592,6 +32500,7 @@
 		(property "Value" "MM3Z3V6"
 			(at 0.1 1.9 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "2c513857-18ae-4a4d-8450-28a5977fbf90")
 			(effects
 				(font
@@ -32814,17 +32723,6 @@
 			(layer "F.Fab")
 			(uuid "2990ab3b-1f76-423b-9e1d-76be38759df0")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 -1.85 90)
-			(layer "F.Fab")
-			(uuid "19283c93-16e9-44d2-9a3e-c6f4a78afda8")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(pad "1" smd roundrect
 			(at -1.05 0 90)
 			(size 0.6 0.45)
@@ -32876,9 +32774,10 @@
 				)
 			)
 		)
-		(property "Value" "MM3Z3V6"
+		(property "Value" "MM3Z4V7"
 			(at 0.1 1.9 180)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "6e2ff8a0-2eb9-4acd-a26d-778f5d56a3a8")
 			(effects
 				(font
@@ -32913,7 +32812,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C116949"
+		(property "LCSC" "C118602"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -33101,17 +33000,6 @@
 			(layer "F.Fab")
 			(uuid "140d4f1c-cfba-4580-9acc-c30183e088a0")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 -1.85 180)
-			(layer "F.Fab")
-			(uuid "b1a16085-70cb-4fcf-80f0-f834317c2365")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(pad "1" smd roundrect
 			(at -1.05 0 180)
 			(size 0.6 0.45)
@@ -33175,7 +33063,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -33378,7 +33266,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -33901,7 +33789,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34104,7 +33992,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34320,7 +34208,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -34840,7 +34728,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -35430,7 +35318,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -35644,7 +35532,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35838,6 +35726,7 @@
 		(property "Value" "MM3Z3V6"
 			(at 0.1 1.9 270)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "333aa9fa-ae9a-457e-b5ab-58ad0f8bf65e")
 			(effects
 				(font
@@ -36060,17 +35949,6 @@
 			(layer "F.Fab")
 			(uuid "0f2a7966-81c3-4bc3-9a62-1e5c48ee8318")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 -1.85 270)
-			(layer "F.Fab")
-			(uuid "59505864-7ba8-4622-8d45-6aaf7afd2cc9")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(pad "1" smd roundrect
 			(at -1.05 0 270)
 			(size 0.6 0.45)
@@ -36134,7 +36012,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -36350,7 +36228,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -36566,7 +36444,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -36782,7 +36660,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37156,7 +37034,7 @@
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pintype "passive")
-			(uuid "70cdb4fe-30e1-4b58-b445-66e4d85d0cb4")
+			(uuid "9aea4567-65c6-446e-b670-1489d5eaac09")
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Connector_RJ.3dshapes/RJ45_Amphenol_RJHSE538X.wrl"
@@ -37201,7 +37079,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37417,7 +37295,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37859,7 +37737,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38053,6 +37931,7 @@
 		(property "Value" "MM3Z3V6"
 			(at 0.1 1.9 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "a69509ed-2503-4aaf-8c51-c7b8c94ec126")
 			(effects
 				(font
@@ -38275,17 +38154,6 @@
 			(layer "F.Fab")
 			(uuid "5b1e0f1c-6d2d-4eb9-9c56-5042ff1c9cab")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 -1.85 90)
-			(layer "F.Fab")
-			(uuid "11a652a7-c79f-4d41-928e-18891d95b864")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(pad "1" smd roundrect
 			(at -1.05 0 90)
 			(size 0.6 0.45)
@@ -38349,7 +38217,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -38550,7 +38418,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -39120,6 +38988,7 @@
 		(property "Value" "MM3Z3V6"
 			(at 0.1 1.9 270)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "2ef429b5-196f-408b-aa1e-0a3d7f73972c")
 			(effects
 				(font
@@ -39341,17 +39210,6 @@
 			)
 			(layer "F.Fab")
 			(uuid "ec6a55eb-5560-4f8f-90ae-e90d6de00bd4")
-		)
-		(fp_text user "${REFERENCE}"
-			(at 0 -1.85 270)
-			(layer "F.Fab")
-			(uuid "9354072e-5ec8-472f-ba2c-5ee34219318c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
 		)
 		(pad "1" smd roundrect
 			(at -1.05 0 270)
@@ -39655,17 +39513,6 @@
 			(layer "F.Fab")
 			(uuid "7e5a1522-b283-4dbf-911f-d5abfca65b9b")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 -1.85 0)
-			(layer "F.Fab")
-			(uuid "ac74a61e-b977-47cc-9520-fa39ab7ed72d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(pad "1" smd roundrect
 			(at -1.05 0)
 			(size 0.6 0.45)
@@ -39729,7 +39576,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -40201,7 +40048,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -40404,7 +40251,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -40588,7 +40435,19 @@
 		(layer "Edge.Cuts")
 		(uuid "0485c493-71f9-4ea4-aa73-642db1dc149c")
 	)
-	(gr_text "SO4R Interlock V2.1\nLicense CC BY-SA \nWA1HCO 2025"
+	(gr_text "2"
+		(at 134 80.5 0)
+		(layer "F.SilkS")
+		(uuid "6d643617-ff04-4e89-97b0-2b5924123d38")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+		)
+	)
+	(gr_text "SO4R Interlock V2.2\nLicense CC BY-SA \nWA1HCO 2025"
 		(at 108.3 140.8 0)
 		(layer "F.SilkS")
 		(uuid "9c9f39b0-556d-401e-8434-b08351bc4b6f")
@@ -40599,6 +40458,184 @@
 				(bold yes)
 			)
 			(justify left bottom)
+		)
+	)
+	(gr_text "4"
+		(at 134 111.5 0)
+		(layer "F.SilkS")
+		(uuid "b7271f6f-0184-4e9f-ba62-efe69e7e2a43")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+		)
+	)
+	(gr_text "3"
+		(at 134 96.5 0)
+		(layer "F.SilkS")
+		(uuid "d93374b4-7c91-4448-9cb6-3521b74f78cd")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+		)
+	)
+	(gr_text "1"
+		(at 134 64.5 0)
+		(layer "F.SilkS")
+		(uuid "e6c4846b-fa81-4930-8b8d-a3e90bc63fc3")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+		)
+	)
+	(gr_text "RLY"
+		(at 133.5 131 0)
+		(layer "F.SilkS")
+		(uuid "fa1f4fff-edbd-4a44-a45f-562adc344029")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+		)
+	)
+	(gr_text "4"
+		(at 167 65 90)
+		(layer "B.SilkS")
+		(uuid "178f3aac-c3ea-4ce2-8118-f55a427f2c8c")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify bottom mirror)
+		)
+	)
+	(gr_text "12V"
+		(at 106 126.5 90)
+		(layer "B.SilkS")
+		(uuid "27ac86dc-3d34-409b-8dae-e0fc3e11adca")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "4"
+		(at 105.5 65 90)
+		(layer "B.SilkS")
+		(uuid "2e877602-b190-4938-8a4e-5174df5a19df")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "3"
+		(at 105.5 80.5 90)
+		(layer "B.SilkS")
+		(uuid "4a88897f-d6d3-484a-957f-00e8f8a67fb4")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "3\n"
+		(at 167 80 90)
+		(layer "B.SilkS")
+		(uuid "5e9aea6f-a558-4ebe-8ff6-e3b81e87c952")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "1"
+		(at 166.5 112 90)
+		(layer "B.SilkS")
+		(uuid "7797f2d0-5c02-4f69-a841-0de3ec853f3b")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify bottom mirror)
+		)
+	)
+	(gr_text "RLY"
+		(at 167 132 90)
+		(layer "B.SilkS")
+		(uuid "8b588fb4-20da-44d9-b1a6-14628e3ab458")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify bottom mirror)
+		)
+	)
+	(gr_text "2"
+		(at 166.5 96 90)
+		(layer "B.SilkS")
+		(uuid "b42ad024-a2ce-4d16-8daa-e24c50799c14")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "1"
+		(at 105.5 112 90)
+		(layer "B.SilkS")
+		(uuid "b5b3c99b-0872-4f8d-a10f-7d26dd7b1b1c")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify mirror)
+		)
+	)
+	(gr_text "2"
+		(at 105.5 96.5 90)
+		(layer "B.SilkS")
+		(uuid "fbcbe980-667c-4034-b7e7-667d0a323900")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify mirror)
 		)
 	)
 	(dimension

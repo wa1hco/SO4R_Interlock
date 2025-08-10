@@ -18719,7 +18719,7 @@
 		(dnp no)
 		(uuid "19e2a40b-f5f0-4b1c-8f9d-f4a21ee26d5b")
 		(property "Reference" "R26"
-			(at 189.992 99.06 90)
+			(at 189.992 99.314 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18727,7 +18727,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 194.056 99.06 90)
+			(at 194.056 99.314 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19478,7 +19478,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MM3Z3V6"
+		(property "Value" "MM3Z4V7"
 			(at 306.07 55.8799 90)
 			(effects
 				(font
@@ -20563,7 +20563,7 @@
 		(dnp no)
 		(uuid "36c1ec1b-faa4-47f8-9c1b-cba76af3dac5")
 		(property "Reference" "R27"
-			(at 189.992 101.6 90)
+			(at 189.992 101.854 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20571,7 +20571,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 194.056 101.6 90)
+			(at 194.056 101.854 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20697,7 +20697,7 @@
 		(dnp no)
 		(uuid "38dbf2cd-3f5d-4374-a9dd-621bd071fd7b")
 		(property "Reference" "R25"
-			(at 189.992 116.84 90)
+			(at 189.992 117.094 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20705,7 +20705,7 @@
 			)
 		)
 		(property "Value" "4K7"
-			(at 194.056 116.84 90)
+			(at 194.056 117.094 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24073,7 +24073,7 @@
 		(dnp no)
 		(uuid "6c17e0de-cdd4-4370-9c5b-a0b8ac2b4390")
 		(property "Reference" "R29"
-			(at 189.992 106.68 90)
+			(at 189.992 106.934 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24081,7 +24081,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 194.056 106.68 90)
+			(at 194.056 106.934 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28695,7 +28695,7 @@
 		(dnp no)
 		(uuid "a06b67f0-6107-448b-8e48-8b31b717f12e")
 		(property "Reference" "R30"
-			(at 189.992 109.22 90)
+			(at 189.992 109.474 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28703,7 +28703,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 194.056 109.22 90)
+			(at 194.056 109.474 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30018,7 +30018,7 @@
 		(dnp no)
 		(uuid "af28fd96-ed48-4bd4-aa51-f15ed3054069")
 		(property "Reference" "R28"
-			(at 189.992 104.14 90)
+			(at 189.992 104.394 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30026,7 +30026,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 194.056 104.14 90)
+			(at 194.056 104.394 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31442,24 +31442,23 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c087cb11-8253-4e0b-a782-0c132f2146cf")
 		(property "Reference" "D19"
-			(at 306.07 135.8899 90)
+			(at 302.006 136.144 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "MM3Z3V6"
-			(at 306.07 138.4299 90)
+		(property "Value" "MM3Z4V7"
+			(at 296.926 138.684 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-323"
@@ -31989,24 +31988,23 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c9eab208-5d41-45e6-853a-8c336e53c391")
 		(property "Reference" "D18"
-			(at 306.07 93.9799 90)
+			(at 302.514 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "MM3Z3V6"
-			(at 306.07 96.5199 90)
+		(property "Value" "MM3Z4V7"
+			(at 297.434 96.266 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-323"
@@ -35820,7 +35818,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MM3Z3V6"
+		(property "Value" "MM3Z4V7"
 			(at 306.07 179.0699 90)
 			(effects
 				(font
