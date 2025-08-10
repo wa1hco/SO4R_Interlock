@@ -31,6 +31,7 @@
 
 void setup() {
   Serial.begin(9600);
+  Serial.available();
   ConfigPins(); // configure the I/O pins
  
   // all Tx off
@@ -61,7 +62,7 @@ void setup() {
   digitalWrite(  CTS4nPIN,    true);
 
   // light the leds in a ripple, leave them off at the end
-  #define LED_DELAY 300
+  #define LED_DELAY 30
   for(byte ii = 0; ii < 2; ii ++) {
     digitalWrite( RLYYELPIN,  true);  delay(LED_DELAY);
     digitalWrite( RLYYELPIN,  false); delay(LED_DELAY);
@@ -237,6 +238,10 @@ void loop() {
 
   digitalWrite(RLYGRNPIN, RLY1 or RLY2 or RLY3 or RLY4);
   digitalWrite(RLYYELPIN, INH2 or INH3 or INH4);
+
+  // print if state change
+  //Serial.printf("%i%i%i%i%i%i%i%i\n", RTS1, RTS2, RTS3, RTS4, KEY1, KEY2, KEY3, KEY4);
+  //delay(100);
 
 } // loop()
 

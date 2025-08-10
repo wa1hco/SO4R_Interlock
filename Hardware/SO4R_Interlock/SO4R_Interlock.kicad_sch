@@ -7251,9 +7251,9 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "SO4R Interlock\n- SSB/CW radio with operator\n- Up to 3 radios for FT8\nRadio Interface\n- PTT, to radio\n- KEY, from radio\n- SPR, undefined, growth option\n- CAT, optional, control radio from USB, growth option \nUSB Interface FTDI FX230 USB serial\n- TXD, RXD, optional, control radio, growth option\n- RTS, to MCU, signals PC wants to transmit\n- CTS, to MCU, undefined, growth option\n- TXDEN, output to control shared bus, unconnected\nOperation\n- watch for RTS asserted from USB interface\n- watch for KEY asserted from radio interface\n- On RTS or KEY for a radio, block PTT to lower priority radios\n- priority determined by port number on interlock\nRadio Interface\n- K3S: PTT IN, KEYOUT_LP\n- IC7100: HSEND, open collector bidirectional\n- IC7300: SEND, open collector bidirectional\n- IC9700: SEND, open collector bidirectional\n- FT-857: TX GND, open collector output\n\n"
+	(text "SO4R Interlock\n- SSB/CW radio with operator\n- Up to 3 radios for FT8\nRadio Interface\n- PTT, to radio\n- KEY, from radio\n- SPR, undefined, growth option\n- CAT, optional, control radio from USB, growth option \nUSB Interface FTDI FX230 USB serial\n- TXD, RXD, optional, control radio, growth option\n- RTS, to MCU, signals PC wants to transmit\n- CTS, to MCU, undefined, growth option\n- TXDEN, output to control shared bus, unconnected\nOperation\n- Watch for RTS asserted from USB interfaces, generally FT8\n- Watch for KEY asserted from radio interface, generally SSB/CW\n- Set Priority based on all RTS and KEY inputs\n- Assert Relay signals based on Priority\n- Assert PTT to highest Priority radio with RTS asserted\n- Block PTT to lower priority radios, can't block KEY, but no amplifier\n- Priority determined by port number on interlock\nRadio Interface\n- K3S: PTT IN, KEYOUT_LP\n- IC7100: HSEND, open collector bidirectional, 12V\n- IC7300: SEND, open collector bidirectional, 12V \n- IC9700: SEND, open collector bidirectional, 12V\n- FT-857: TX GND, open collector output, 13.8V\n\n"
 		(exclude_from_sim no)
-		(at 191.008 44.704 0)
+		(at 186.69 44.958 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -25267,7 +25267,7 @@
 		(dnp no)
 		(uuid "7f2d6c43-01e8-454c-aecc-adc3f40aa3be")
 		(property "Reference" "C45"
-			(at 249.174 113.538 0)
+			(at 249.174 114.046 0)
 			(effects
 				(font
 					(size 1.27 1.27)

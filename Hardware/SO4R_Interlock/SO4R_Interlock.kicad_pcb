@@ -40645,7 +40645,7 @@
 		(pts
 			(xy 103.2 48) (xy 170.6 48.01)
 		)
-		(height -15.15)
+		(height -7.703552)
 		(format
 			(prefix "")
 			(suffix "")
@@ -40663,7 +40663,7 @@
 			(keep_text_aligned yes)
 		)
 		(gr_text "2.6535 in"
-			(at 136.902419 31.705 359.9914991)
+			(at 136.901314 39.151448 359.9914991)
 			(layer "Dwgs.User")
 			(uuid "ab5e64e2-935a-4a19-8675-d620d9722fd8")
 			(effects
