@@ -47,14 +47,14 @@ void setup() {
   digitalWrite(   RLY4PIN,    false);  // Priority 4 Relays, WSJTX radio
 
   // all LEDs on RJ45 off
-  digitalWrite(   RIGGRN1PIN, false);
-  digitalWrite(   RIGYEL1PIN, false);
-  digitalWrite(   RIGGRN2PIN, false);
-  digitalWrite(   RIGYEL2PIN, false);
-  digitalWrite(   RIGGRN3PIN, false);
-  digitalWrite(   RIGYEL3PIN, false);
-  digitalWrite(   RIGGRN4PIN, false);
-  digitalWrite(   RIGYEL4PIN, false);
+  digitalWrite(   RIG1GRNPIN, false);
+  digitalWrite(   RIG1YELPIN, false);
+  digitalWrite(   RIG2GRNPIN, false);
+  digitalWrite(   RIG2YELPIN, false);
+  digitalWrite(   RIG3GRNPIN, false);
+  digitalWrite(   RIG3YELPIN, false);
+  digitalWrite(   RIG4GRNPIN, false);
+  digitalWrite(   RIG4YELPIN, false);
 
   // CTS\ from MCU to USB chip not asserted
   digitalWrite(  CTS2nPIN,    true);
@@ -69,25 +69,25 @@ void setup() {
     digitalWrite( RLYGRNPIN,  true);  delay(LED_DELAY);
     digitalWrite( RLYGRNPIN,  false); delay(LED_DELAY);
 
-    digitalWrite( RIGYEL1PIN, true);  delay(LED_DELAY);
-    digitalWrite( RIGYEL1PIN, false); delay(LED_DELAY);
-    digitalWrite( RIGGRN1PIN, true);  delay(LED_DELAY);
-    digitalWrite( RIGGRN1PIN, false); delay(LED_DELAY);
+    digitalWrite( RIG1YELPIN, true);  delay(LED_DELAY);
+    digitalWrite( RIG1YELPIN, false); delay(LED_DELAY);
+    digitalWrite( RIG1GRNPIN, true);  delay(LED_DELAY);
+    digitalWrite( RIG1GRNPIN, false); delay(LED_DELAY);
 
-    digitalWrite( RIGYEL2PIN, true);  delay(LED_DELAY);
-    digitalWrite( RIGYEL2PIN, false); delay(LED_DELAY);
-    digitalWrite( RIGGRN2PIN, true);  delay(LED_DELAY);
-    digitalWrite( RIGGRN2PIN, false); delay(LED_DELAY);
+    digitalWrite( RIG2YELPIN, true);  delay(LED_DELAY);
+    digitalWrite( RIG2YELPIN, false); delay(LED_DELAY);
+    digitalWrite( RIG2GRNPIN, true);  delay(LED_DELAY);
+    digitalWrite( RIG2GRNPIN, false); delay(LED_DELAY);
 
-    digitalWrite( RIGYEL3PIN, true);  delay(LED_DELAY); 
-    digitalWrite( RIGYEL3PIN, false); delay(LED_DELAY);
-    digitalWrite( RIGGRN3PIN, true);  delay(LED_DELAY);
-    digitalWrite( RIGGRN3PIN, false); delay(LED_DELAY);
+    digitalWrite( RIG3YELPIN, true);  delay(LED_DELAY); 
+    digitalWrite( RIG3YELPIN, false); delay(LED_DELAY);
+    digitalWrite( RIG3GRNPIN, true);  delay(LED_DELAY);
+    digitalWrite( RIG3GRNPIN, false); delay(LED_DELAY);
 
-    digitalWrite( RIGYEL4PIN, true);  delay(LED_DELAY);
-    digitalWrite( RIGYEL4PIN, false); delay(LED_DELAY);
-    digitalWrite( RIGGRN4PIN, true);  delay(LED_DELAY);
-    digitalWrite( RIGGRN4PIN, false); delay(LED_DELAY);
+    digitalWrite( RIG4YELPIN, true);  delay(LED_DELAY);
+    digitalWrite( RIG4YELPIN, false); delay(LED_DELAY);
+    digitalWrite( RIG4GRNPIN, true);  delay(LED_DELAY);
+    digitalWrite( RIG4GRNPIN, false); delay(LED_DELAY);
 
     // defaults for the relay driver diagnostic function
     digitalWrite( DSEL0PIN,   false);
@@ -173,15 +173,15 @@ void loop() {
 
   
   #if 0 //idagnostics
-  digitalWrite(RIGGRN1PIN, RTS1);
-  digitalWrite(RIGGRN2PIN, RTS2);
-  digitalWrite(RIGGRN3PIN, RTS3);
-  digitalWrite(RIGGRN4PIN, RTS4);
+  digitalWrite(RIG1GRNPIN, RTS1);
+  digitalWrite(RIG2GRNPIN, RTS2);
+  digitalWrite(RIG3GRNPIN, RTS3);
+  digitalWrite(RIG4GRNPIN, RTS4);
 
-  digitalWrite(RIGYEL1PIN, KEY1);
-  digitalWrite(RIGYEL2PIN, KEY2);
-  digitalWrite(RIGYEL3PIN, KEY3);
-  digitalWrite(RIGYEL4PIN, KEY4);
+  digitalWrite(RIG1YELPIN, KEY1);
+  digitalWrite(RIG2YELPIN, KEY2);
+  digitalWrite(RIG3YELPIN, KEY3);
+  digitalWrite(RIG4YELPIN, KEY4);
   #endif 
 
   // Priority initialized to 0 (Rx)
@@ -223,18 +223,18 @@ void loop() {
   digitalWrite(PTT4PIN, PTT4);
 
   // Assert Tx LED to RJ45 LED same as relays
-  digitalWrite(RIGGRN1PIN,  RLY1);
-  digitalWrite(RIGGRN2PIN,  RLY2);
-  digitalWrite(RIGGRN3PIN,  RLY3);
-  digitalWrite(RIGGRN4PIN,  RLY4);
+  digitalWrite(RIG1GRNPIN,  RLY1);
+  digitalWrite(RIG2GRNPIN,  RLY2);
+  digitalWrite(RIG3GRNPIN,  RLY3);
+  digitalWrite(RIG4GRNPIN,  RLY4);
 
   // Assert Inhibit LED to RJ45 LED if radio want Tx but not highest priority
   bool INH2 = (RTS2 or KEY2) and (Priority > 0) and (Priority < 2);
   bool INH3 = (RTS3 or KEY3) and (Priority > 0) and (Priority < 3);
   bool INH4 = (RTS4 or KEY4) and (Priority > 0) and (Priority < 4);
-  digitalWrite(RIGYEL2PIN, INH2); 
-  digitalWrite(RIGYEL3PIN, INH3);
-  digitalWrite(RIGYEL4PIN, INH4);
+  digitalWrite(RIG2YELPIN, INH2); 
+  digitalWrite(RIG3YELPIN, INH3);
+  digitalWrite(RIG4YELPIN, INH4);
 
   digitalWrite(RLYGRNPIN, RLY1 or RLY2 or RLY3 or RLY4);
   digitalWrite(RLYYELPIN, INH2 or INH3 or INH4);
