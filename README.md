@@ -1,42 +1,60 @@
-# SO4R_Interlock
+# SO4R_Interlock V1
 The interlock manages up to 4 radios for a contesting scenario
+
 Baseline capability for one SSB/CW radio plus 3 WSJTX radios.
 Antenna separation is sufficient to allow reception when other radio is transmitting
 SSB/CW radio has an amplifier and rotatable antenna
-Each of three WSJTx instances have radio, amplifier, and antenna (generally fixed)
-WSJTX operator monitors list of available stations and may click ENABLE transmission
+
+Each of three WSJTx instances have radio and antenna (generally fixed).  Amplifier is shared among radios
+WSJTX feeds N1MM, Gridtracker or other program that display a combined list of stations needed.
+Operator clicks on a station in the list and that WSJTX begins the contact.
+SSB/CW operator can continue to operate, which interrupts WSJTX transmission.
+
 Each of 4 radio have a priority with SSB/CW being highest
-SSB/CW operation can continue while WSJTX is making contacts while staying within the rules
+SSB/CW operation can continue while WSJTX is making contacts while staying within the ARRL VHF contest rules
 
-When a high priority tranmitter needs to interrupt a lower priority tranmission, 
-the interlock gates the PTT/RTS/DTR line to the lower priority radio.  This keeps the radio's
-built in sequencer operating to protect the amplifier, preamp, and relays.
+When a higher priority tranmitter needs to interrupt a lower priority tranmission, 
+the interlock gates the PTT line to the lower priority radio.  This keeps the radio's
+built in sequencer operating to protect the amplifier, preamp, and relays.  
+The interlock also controls the RF relays to disconnect the lower priority transmitter 
+and connect the highest priority transmitter
 
-The interlock has one ssb/cw port that receives the TX signal from the radio.  The operator
-generates the TX signal from PTT, VOX, or CW so the interlock does not need to provice TX
-to the SSB/CW radio.
-
-The interlock includes a USB serial port to provide the TX signal.  The microcontroller then
-gates the TX signal based on higher priority TX signal
-
-Operator uses ssb/cw radio for contacts and has highest priority for transmitting
-An operator also monitors the received callsigns from up to three WSJTX instances. Separately 
-from the Interlock, WSJTX callsigns are received, compared with the log and turned into a 
-color coded list of callsigns and grids.  On selecting a station from the list, the corresponding
-WSJTX is enabled for transmit
-
-Interface from Interlock to Radio
-The SSB/CW radio only has an input to interlock for TX
-The three WSJTX radios have an output from interlock for Tx and an input 
-
-SO4R Interlock
-- SSB/CW radio with operator
-- added radios for FT8
 Radio Interface
-- PTT, bidirectional
-- Tx inhibit
-Operation
-- watch for PTT asserted from all radios
-- On PTT, assert Tx inhibit to all lower priority ports
-- priority determined by port number on interlock
+* PTT, output open collector, low true, 60V, 300 mA
+* KEY, input, open collector, low true, 5 to 15 V
+* CAT, bidirectional, open collector, ttl levels, serial communication
+* Spare, direct connection to MCU I/O pin
+
+Relay interface
+* Open collector, low true, 60V, 300 mA
+* each output drives DPDT transfer relay and one port of 4:1 selector on both amp input and output
+
+USB serial interface
+* Implemented with FTDI FT230 usb serial chip
+* TxD, RxD for CAT
+* RTS, output, for signaling Transmit
+* CTS, input, available, interfaced to MCU, no function assigned
+* USB EEPROM changed to make it easier to find the ports
+  * Manufacturer is "FTDI WA1HCO"
+  * Product is "FT230X SO4R Port {1-4}"
+
+SSB/CW radio interface
+* highest priority radio, Priority = 1
+* USB serial TxD, RxD used for MCU programming
+* USB serial RTS used for keying radio from N1MM
+* KEY signal from Radio used to set priority and control relays
+
+WSJTX radio interface
+* Lower priority radios, Priority = 2, 3, or 4
+* USB serial implements COM port used by WSJTX software
+* Serial data TxD and RxD converted to CAT bidirectional open collector
+* RTS signal used for Tx command to radio
+* CTS signal routed to MCU but not assigned a function
+
+WSJTX operation
+* Operator uses ssb/cw radio for contacts and has highest priority for transmitting.
+* 3 WSJTX instances listen on 3 radios in 3 directions.
+* Each WSJTX sends it list of callsigns to N1MM or Gridtracker which displays list of needed stations.
+* The operator clicks on a callsign in the list to start a WSJTX contact.
+* WSJTX indicates need to transmit by asserting RTS on its serial interface
 
