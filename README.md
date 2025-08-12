@@ -26,7 +26,9 @@ Radio Interface
 * Spare, direct connection to MCU I/O pin
 
 Relay interface
-* 4 Relay control output with 60V 300 mA capability
+* Relay output are drive high from nominal 12V source
+  * uses BTS5200-4 driver chip for fault protection and diagnositc capability
+* 12V is sourced from a rig interface for from coaxial type M connector
 * each output drives DPDT transfer relay and one port of 4:1 selector on both amp input and output
 
 USB serial interface
