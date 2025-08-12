@@ -33,9 +33,12 @@ Relay interface
 
 USB serial interface
 * Implemented with FTDI FT230 usb serial chip
-* TxD, RxD for CAT
+* TxD, RxD, for CAT
 * RTS, output, for signaling Transmit
 * CTS, input, available, interfaced to MCU, no function assigned
+* USB EEPROM changed to make it easier to find the ports
+  * Manufacturer is "FTDI WA1HCO"
+  * Product is "FT230X SO4R Port {1-4}"
 
 SSB/CW radio interface
 * highest priority radio, Priority = 1
