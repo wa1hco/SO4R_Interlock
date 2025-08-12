@@ -33,12 +33,12 @@ void ConfigPins() {
 
   // RJ45 radio interface jack LEDs
   // LEDs are high true
-  pinMode(RIG1GRNPIN, OUTPUT); // Green, transmitting
+  pinMode(RIG1GRNPIN, OUTPUT); // Rig Green, transmitting
   pinMode(RIG2GRNPIN, OUTPUT);
   pinMode(RIG3GRNPIN, OUTPUT);
   pinMode(RIG4GRNPIN, OUTPUT);
  
-  pinMode(RIG1YELPIN, OUTPUT); // RIGYELlow, inhibited
+  pinMode(RIG1YELPIN, OUTPUT); // RIG Yellow, inhibited
   pinMode(RIG2YELPIN, OUTPUT);
   pinMode(RIG3YELPIN, OUTPUT);
   pinMode(RIG4YELPIN, OUTPUT);
