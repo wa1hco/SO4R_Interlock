@@ -44,8 +44,8 @@ void ConfigPins() {
   pinMode(RIG4YELPIN, OUTPUT);
 
   // RJ45 relay interface jack LEDs 
-  pinMode(RLYGRNPIN,  OUTPUT); // Green, something transmitting
-  pinMode(RLYYELPIN,  OUTPUT); // RIGYELlow, something inhibited
+  pinMode(RLYGRNPIN,  OUTPUT); // Rig Green, something transmitting
+  pinMode(RLYYELPIN,  OUTPUT); // RIG Yellow, something inhibited
 
   // RJ45 relay interface jack signals
   // RLY are high true, buffered with BTS5200 relay driver
