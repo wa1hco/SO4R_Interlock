@@ -30,15 +30,15 @@ void ConfigPins() {
   //pinMode(SPR4PIN,    INPUT_PULLUP);
 
   // RJ45 radio interface jack LEDs
-  pinMode(TX1LEDPIN,  OUTPUT);
-  pinMode(TX2LEDPIN,  OUTPUT);
-  pinMode(TX3LEDPIN,  OUTPUT);
-  pinMode(TX4LEDPIN,  OUTPUT);
+  pinMode(RIGGRN1PIN,  OUTPUT);
+  pinMode(RIGGRN2PIN,  OUTPUT);
+  pinMode(RIGGRN3PIN,  OUTPUT);
+  pinMode(RIGGRN4PIN,  OUTPUT);
  
-  pinMode(INH1LEDPIN, OUTPUT);
-  pinMode(INH2LEDPIN, OUTPUT);
-  pinMode(INH3LEDPIN, OUTPUT);
-  pinMode(INH4LEDPIN, OUTPUT);
+  pinMode(RIGYEL1PIN, OUTPUT);
+  pinMode(RIGYEL2PIN, OUTPUT);
+  pinMode(RIGYEL3PIN, OUTPUT);
+  pinMode(RIGYEL4PIN, OUTPUT);
 
   // RJ45 relay interface jack signals
   pinMode(RLY1PIN, OUTPUT);
@@ -47,6 +47,6 @@ void ConfigPins() {
   pinMode(RLY4PIN, OUTPUT);
 
   // RJ45 relay interface jack LEDs 
-  pinMode(TX0PIN, OUTPUT);
-  pinMode(TX1PIN, OUTPUT);
+  pinMode(RLYGRNPIN, OUTPUT);
+  pinMode(RLYYELPIN, OUTPUT);
 }

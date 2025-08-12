@@ -46,14 +46,14 @@ void setup() {
   digitalWrite(   RLY4PIN, false);  // Priority 4 Relays, WSJTX radio
 
   // all LEDs on RJ45 off
-  digitalWrite( TX1LEDPIN, false);
-  digitalWrite(INH1LEDPIN, false);
-  digitalWrite( TX2LEDPIN, false);
-  digitalWrite(INH2LEDPIN, false);
-  digitalWrite( TX3LEDPIN, false);
-  digitalWrite(INH3LEDPIN, false);
-  digitalWrite( TX4LEDPIN, false);
-  digitalWrite(INH4LEDPIN, false);
+  digitalWrite( RIGGRN1PIN, false);
+  digitalWrite(RIGYEL1PIN, false);
+  digitalWrite( RIGGRN2PIN, false);
+  digitalWrite(RIGYEL2PIN, false);
+  digitalWrite( RIGGRN3PIN, false);
+  digitalWrite(RIGYEL3PIN, false);
+  digitalWrite( RIGGRN4PIN, false);
+  digitalWrite(RIGYEL4PIN, false);
 
   // CTS\ from MCU to USB chip not asserted
   digitalWrite(  CTS2nPIN, true);
@@ -175,22 +175,22 @@ void loop() {
   digitalWrite(PTT4PIN,    PTT4);
 
   // Assert Tx LED to RJ45 LED highest priority radio interface
-  bool TX1LED  = (Priority == 1);
-  bool TX2LED  = (Priority == 2);
-  bool TX3LED  = (Priority == 3);
-  bool TX4LED  = (Priority == 4);
-  digitalWrite(TX1LEDPIN,  TX1LED);
-  digitalWrite(TX2LEDPIN,  TX2LED);
-  digitalWrite(TX3LEDPIN,  TX3LED);
-  digitalWrite(TX4LEDPIN,  TX4LED);
+  bool RIGGRN1  = (Priority == 1);
+  bool RIGGRN2  = (Priority == 2);
+  bool RIGGRN3  = (Priority == 3);
+  bool RIGGRN4  = (Priority == 4);
+  digitalWrite(RIGGRN1PIN,  RIGGRN1);
+  digitalWrite(RIGGRN2PIN,  RIGGRN2);
+  digitalWrite(RIGGRN3PIN,  RIGGRN3);
+  digitalWrite(RIGGRN4PIN,  RIGGRN4);
 
   // Assert Inhibit LED to RJ45 LED if radio want Tx but not highest priority
   bool INH2LED = (RTS2 or KEY2) and (Priority > 0) and (Priority < 2);
   bool INH3LED = (RTS3 or KEY3) and (Priority > 0) and (Priority < 3);
   bool INH4LED = (RTS4 or KEY4) and (Priority > 0) and (Priority < 4);
-  digitalWrite(INH2LEDPIN, INH2LED); 
-  digitalWrite(INH3LEDPIN, INH3LED);
-  digitalWrite(INH4LEDPIN, INH4LED);
+  digitalWrite(RIGYEL2PIN, INH2LED); 
+  digitalWrite(RIGYEL3PIN, INH3LED);
+  digitalWrite(RIGYEL4PIN, INH4LED);
 
 } // loop()
 

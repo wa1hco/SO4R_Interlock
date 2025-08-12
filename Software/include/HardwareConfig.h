@@ -7,7 +7,7 @@
 //-----|--------|----------|------|-------|--------|-------|-------|--------|--------|
 // Pin | Name   | Function | Free | Power | Serial | ADC   | DAC |  SPI   |  TWI   |
 //-----|--------|----------|------|-------|--------|-------|-----|--------|--------|
-//  1  | PA5    | INH4_LED |      |       | 0,rxd  |       |     |        |        |
+//  1  | PA5    | RIGYEL4     |      |       | 0,rxd  |       |     |        |        |
 //  2  | PA6    |          |      |       | 0,xck  |       |     | 0,MOSI |        |
 //  3  | PA7    | RTS4\    |      |       | 0,xdir |       |     | 0,MISO |        |
 //  4  | PB0    | CTS4\    |      |       | 3,TXD  |       |     | 0,SCK  |        |
@@ -18,7 +18,7 @@
 //  9  | PB5    | RTS1\    |      |       | 3,rxd  |       |     |        |        |
 // 10  | PC0    | CTS1\    |      |       | 1,TXD  |       |     |        |        |
 // 11  | PC1    |          | PC1  |       | 1,RXD  |       |     |        |        |
-// 12  | PC2    | TX0      |      |       | 1,XCK  |       |     |        | 0,sda  |
+// 12  | PC2    | RLYGRN      |      |       | 1,XCK  |       |     |        | 0,sda  |
 //-----|--------|----------|------|-------|--------|-------|-----|--------|--------|
 // 13  | PC3    | RLY1     |      |       | 1,XDIR |       |     |        | 0,scl  |
 // 14  | VDDIO2 |          |      | 5V    |        |       |     |        |        |
@@ -26,29 +26,29 @@
 // 16  | PC4    | RLY2     |      |       | 1,txd  |       |     |        |        |
 // 17  | PC5    | RLY3     |      |       | 1,rxd  |       |     |        |        |
 // 18  | PC6    | RLY4     |      |       | 1,xck  |       |     |        | 0,sda  |
-// 19  | PC7    | TX1      |      |       | 1,xdir |       |     |        | 0,sda  |
-// 20  | PD0    | TX1_LED  |      |       |        | AIN0  |     |        |        |
+// 19  | PC7    | RLYYEL      |      |       | 1,xdir |       |     |        | 0,sda  |
+// 20  | PD0    | RIGGRN1     |      |       |        | AIN0  |     |        |        |
 // 21  | PD1    | SPR1     |      |       |        | AIN1  |     |        |        |
 // 22  | PD2    | KEY1\M   |      |       |        | AIN2  |     |        |        |
 // 23  | PD3    | PTT1     |      |       |        | AIN3  |     |        |        |
-// 24  | PD4    | INH1_LED |      |       |        | AIN4  |     |        |        |
+// 24  | PD4    | RIGYEL1     |      |       |        | AIN4  |     |        |        |
 //-----|--------|----------|------|--=----|--------|-------|-----|--------|--------|
-// 25  | PD5    | TX2_LED  |      |       |        | AIN5  |     |        |        |
+// 25  | PD5    | RIGGRN2     |      |       |        | AIN5  |     |        |        |
 // 26  | PD6    | SPR2     |      |       |        | AIN6  | OUT |        |        |
 // 27  | PD7    | KEY2\    |      |       |        | AIN7  |     |        |        |
 // 28  | AVDD   |          |      | 5V    |        |       |     |        |        |
 // 29  | AGND   |          |      | GND   |        |       |     |        |        |
 // 30  | PE0    | PTT2     |      |       | 4,TXD  | AIN8  |     | 0,mosi |        |
 // 31  | PE1    |          | PE1  |       | 4,RXD  | AIN9  |     | 0,miso |        |
-// 32  | PE2    | INH2_LED |      |       | 4,XCK  | AIN10 |     | 0,sck  |        |
-// 33  | PE3    | TX3_LED  |      |       | 4,XDIR | AIN11 |     | 0,ss\  |        |
+// 32  | PE2    | RIGYEL2     |      |       | 4,XCK  | AIN10 |     | 0,sck  |        |
+// 33  | PE3    | RIGGRN3     |      |       | 4,XDIR | AIN11 |     | 0,ss\  |        |
 // 34  | PF0    | SPR3     |      |       | 2,TXD  |       |     |        |        |
 // 35  | PF1    | KEY3\M   |      |       | 2,RXD  |       |     |        |        |
 // 36  | PF2    | PTT3     |      |       | 2,XCK  |       |     |        | 1,SDA  |
 //-----|--------|----------|------|-------|--------|-------|-----|--------|--------|
 // 37  | PF3    |          | PF3  |       | 2,XDIR |       |     |        | 1,SCL  |
-// 38  | PF4    | INH3_LED |      |       | 2,txd  |       |     |        |        |
-// 39  | PF5    | TX4_LED  |      |       | 2,rxd  |       |     |        |        |
+// 38  | PF4    | RIGYEL3     |      |       | 2,txd  |       |     |        |        |
+// 39  | PF5    | RIGGRN4     |      |       | 2,rxd  |       |     |        |        |
 // 40  | PF6    | RESET    |      | RESET |        |       |     |        |        |
 // 41  | UPDI   | UPDI     |      | UPDI  |        |       |     |        |        |
 // 42  | VDD    | 5V       |      | 5V    |        |       |     |        |        |
@@ -92,15 +92,15 @@
 
 // Define LEDs on RJ-45 rig interface jack
 //      PinName     Port Name  TQFP48  Function
-#define TX1LEDPIN   PIN_PD0    // 20   output, high true, radio keyed
-#define TX2LEDPIN   PIN_PD5    // 25
-#define TX3LEDPIN   PIN_PE3    // 33
-#define TX4LEDPIN   PIN_PF5    // 39
+#define RIGGRN1PIN     PIN_PD0    // 20   output, high true, radio keyed
+#define RIGGRN2PIN     PIN_PD5    // 25
+#define RIGGRN3PIN     PIN_PE3    // 33
+#define RIGGRN4PIN     PIN_PF5    // 39
 
-#define INH1LEDPIN  PIN_PD4    // 24   output, high true, radio inhibited
-#define INH2LEDPIN  PIN_PE2    // 32
-#define INH3LEDPIN  PIN_PF4    // 38
-#define INH4LEDPIN  PIN_PA5    //  1
+#define RIGYEL1PIN     PIN_PD4    // 24   output, high true, radio inhibited
+#define RIGYEL2PIN     PIN_PE2    // 32
+#define RIGYEL3PIN     PIN_PF4    // 38
+#define RIGYEL4PIN     PIN_PA5    //  1
 
 // Define connection to relays
 #define RLY1PIN     PIN_PC3    // 13   output, high true
@@ -109,8 +109,8 @@
 #define RLY4PIN     PIN_PC6    // 18   output, high true
 
 // Define connections to LEDs on RJ-45 relay interface JACK
-#define TX0PIN      PIN_PC2    // 12   output, high true
-#define TX1PIN      PIN_PC7    // 19   output, high true
+#define RLYGRNPIN      PIN_PC2    // 12   output, high true
+#define RLYYELPIN      PIN_PC7    // 19   output, high true
 
 // Public function
 void ConfigPins();
