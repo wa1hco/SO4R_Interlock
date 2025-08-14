@@ -5,6 +5,171 @@
 	(uuid "846d7b0b-a460-49aa-86ba-23439f8c4bcc")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Connector:Conn_01x02_Socket"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02_Socket"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x02_Socket_1_1"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -0.508 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -0.508 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -0.508)
+					(mid -0.5058 0)
+					(end 0 0.508)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -3.048)
+					(mid -0.5058 -2.54)
+					(end 0 -2.032)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:DE15_Socket_HighDensity"
 			(pin_names
 				(offset 1.016)
@@ -928,6 +1093,319 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector_Audio:AudioJack2"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "AudioJack2"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Audio Jack, 2 Poles (Mono / TS)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "audio jack receptacle mono phone headphone TS connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Jack*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "AudioJack2_0_1"
+				(rectangle
+					(start -3.81 0)
+					(end -2.54 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -2.54 3.81)
+					(end 2.54 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0.635 -0.635) (xy 1.27 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy -0.635 2.54) (xy -0.635 0) (xy -1.27 -0.635) (xy -1.905 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "AudioJack2_1_1"
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "T"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector_Audio:AudioPlug2"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 10.16 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "AudioPlug2"
+				(at 10.16 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 8.89 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 8.89 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Audio Jack, 2 Poles (Mono / TS)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "audio jack plug stereo headphones TRRS connector 2.5mm 3.5mm 6.35mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Plug*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "AudioPlug2_0_0"
+				(text "T"
+					(at -8.89 0 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(text "S"
+					(at 3.81 0 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(symbol "AudioPlug2_0_1"
+				(rectangle
+					(start -3.81 3.81)
+					(end 8.89 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 3.81) (xy -5.08 3.81) (xy -6.35 2.54) (xy -10.16 3.81) (xy -12.7 1.27) (xy -12.7 -1.27)
+						(xy -10.16 -3.81) (xy -6.35 -2.54) (xy -5.08 -3.81) (xy -3.81 -3.81) (xy -3.81 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start 12.7 5.08)
+					(end 8.89 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "AudioPlug2_1_1"
+				(pin passive line
+					(at 15.24 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 -2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "T"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "Elecraft K3S"
 		(exclude_from_sim no)
@@ -974,8 +1452,40 @@
 		(uuid "0a343999-0f07-403f-b065-4c88f885585e")
 	)
 	(no_connect
+		(at 149.86 78.74)
+		(uuid "1ec2708f-fe1a-4cf4-9b6c-d75bd1d6c0aa")
+	)
+	(no_connect
+		(at 149.86 81.28)
+		(uuid "3a1ed1d2-bf20-470c-9b3d-49ec4c615ef0")
+	)
+	(no_connect
+		(at 186.69 91.44)
+		(uuid "3f5a71f4-86f1-47a6-a2cf-fe572725f9bc")
+	)
+	(no_connect
+		(at 149.86 73.66)
+		(uuid "50a21436-69b5-47cb-a71b-1c246f951876")
+	)
+	(no_connect
+		(at 149.86 68.58)
+		(uuid "530bc3d1-a7ef-4720-bbd5-d5dc99c635aa")
+	)
+	(no_connect
+		(at 149.86 71.12)
+		(uuid "78def4a7-4fd8-4824-ad4d-361318efb2b9")
+	)
+	(no_connect
+		(at 149.86 83.82)
+		(uuid "8141fb8f-e904-46b6-93b0-6e2fcbcbb329")
+	)
+	(no_connect
 		(at 118.11 73.66)
 		(uuid "87aba696-b75e-4870-a325-0d04e894e1b0")
+	)
+	(no_connect
+		(at 149.86 76.2)
+		(uuid "8e59132e-6c3e-4b68-a30c-83ec0d66bf18")
 	)
 	(no_connect
 		(at 167.64 48.26)
@@ -984,6 +1494,18 @@
 	(no_connect
 		(at 118.11 71.12)
 		(uuid "b77a1173-13eb-401f-8b0e-d6bd9708c61c")
+	)
+	(no_connect
+		(at 186.69 81.28)
+		(uuid "cfeca0a3-6cca-48dc-8fe7-77ec7ee993a5")
+	)
+	(no_connect
+		(at 186.69 86.36)
+		(uuid "d63ef913-b3fc-4236-b7ef-b3dc5a4c8044")
+	)
+	(no_connect
+		(at 186.69 71.12)
+		(uuid "ee4aecd6-8a35-4d10-992f-7a051c13b7a3")
 	)
 	(wire
 		(pts
@@ -1067,6 +1589,26 @@
 	)
 	(wire
 		(pts
+			(xy 149.86 124.46) (xy 157.48 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31ad507c-7a0a-41a2-a40e-99142945e7a0")
+	)
+	(wire
+		(pts
+			(xy 149.86 107.95) (xy 165.1 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35bb9335-c177-4160-970a-3638c5e3e177")
+	)
+	(wire
+		(pts
 			(xy 95.25 81.28) (xy 118.11 81.28)
 		)
 		(stroke
@@ -1077,6 +1619,16 @@
 	)
 	(wire
 		(pts
+			(xy 149.86 110.49) (xy 165.1 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4fd78897-0d42-462e-865c-c53c56825aa8")
+	)
+	(wire
+		(pts
 			(xy 149.86 68.58) (xy 160.02 68.58)
 		)
 		(stroke
@@ -1084,6 +1636,16 @@
 			(type default)
 		)
 		(uuid "65a718f5-acfc-4578-857d-b126ff4684ca")
+	)
+	(wire
+		(pts
+			(xy 149.86 137.16) (xy 165.1 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f5f7924-638e-4eb6-9f75-fe70bfe475e8")
 	)
 	(wire
 		(pts
@@ -1157,6 +1719,16 @@
 	)
 	(wire
 		(pts
+			(xy 149.86 119.38) (xy 157.48 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa92524d-2a52-4738-89d0-98168d876a0d")
+	)
+	(wire
+		(pts
 			(xy 175.26 86.36) (xy 186.69 86.36)
 		)
 		(stroke
@@ -1164,6 +1736,16 @@
 			(type default)
 		)
 		(uuid "c3915b65-6178-4a05-bdb4-27095c5db08e")
+	)
+	(wire
+		(pts
+			(xy 149.86 134.62) (xy 165.1 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbe7dc2e-d01f-4199-892f-bcd8ef30a299")
 	)
 	(wire
 		(pts
@@ -2922,6 +3504,16 @@
 		)
 		(uuid "0585e8ce-4a85-4b2e-8669-b37337119841")
 	)
+	(label "GND"
+		(at 151.13 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1056b84f-b3f4-414b-87a8-bdacbd779186")
+	)
 	(label "PTT{slash}"
 		(at 151.13 86.36 0)
 		(effects
@@ -3073,6 +3665,16 @@
 		(uuid "8e0e2af1-3024-4735-a6f3-35574d43e12a")
 	)
 	(label "GND"
+		(at 151.13 124.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "90f79407-92fc-4576-88df-57cb79e2b635")
+	)
+	(label "GND"
 		(at 109.22 76.2 0)
 		(effects
 			(font
@@ -3112,6 +3714,16 @@
 		)
 		(uuid "9bfdff4b-eec6-419e-9854-531fc303073e")
 	)
+	(label "GND"
+		(at 151.13 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a1398d9a-1c36-492a-96e2-0e63fd2a85b8")
+	)
 	(label "BAND3"
 		(at 175.26 86.36 0)
 		(effects
@@ -3131,6 +3743,16 @@
 			(justify left bottom)
 		)
 		(uuid "bc897927-118a-4c52-8d7e-320d8704228b")
+	)
+	(label "PTT{slash}"
+		(at 151.13 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c3a87c75-033e-4ae6-900a-4d909396b93b")
 	)
 	(label "KEY{slash}"
 		(at 96.52 83.82 0)
@@ -3162,6 +3784,16 @@
 		)
 		(uuid "d2f8302a-59cf-4a0b-b018-7ee020f544db")
 	)
+	(label "13.8V"
+		(at 151.13 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dd32a2da-ef25-463f-8357-f113884177f7")
+	)
 	(label "BAND0"
 		(at 175.26 81.28 0)
 		(effects
@@ -3181,6 +3813,155 @@
 			(justify left bottom)
 		)
 		(uuid "faa89ef9-b1f2-4ffe-a5ab-1fb7a2572981")
+	)
+	(label "PTT{slash}"
+		(at 151.13 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fdc48350-9cf3-4599-9ced-c50bcb747a8a")
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Socket")
+		(at 49.53 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d1bd3962-964a-4b0f-85e9-62e98e378f00")
+		(property "Reference" "J15"
+			(at 50.8 101.5999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02_Socket"
+			(at 50.8 104.1399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 49.53 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 49.53 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a680ced3-3059-4a80-8e44-88bee0287ff3")
+		)
+		(pin "2"
+			(uuid "3d6083b3-d4a7-4ee8-8784-d8ed39e8d419")
+		)
+		(instances
+			(project ""
+				(path "/65a6842f-7ce8-4a1d-bd27-c5cbbec442dc/581af204-107c-47d6-980c-6156cf0eb65e"
+					(reference "J15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Audio:AudioJack2")
+		(at 170.18 134.62 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d4fc2d44-675f-438a-9425-be030a7fb94c")
+		(property "Reference" "J22"
+			(at 175.26 136.5251 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "6.25 mm jack"
+			(at 175.26 133.9851 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.18 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 170.18 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Audio Jack, 2 Poles (Mono / TS)"
+			(at 170.18 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "a60b7c39-c489-422f-8511-c2026067c8b8")
+		)
+		(pin "T"
+			(uuid "2e7bf567-6942-4518-beb2-f6afbb62d143")
+		)
+		(instances
+			(project "Radio_Interface_Cables"
+				(path "/65a6842f-7ce8-4a1d-bd27-c5cbbec442dc/581af204-107c-47d6-980c-6156cf0eb65e"
+					(reference "J22")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Connector:DE15_Socket_HighDensity")
@@ -3284,6 +4065,146 @@
 			(project ""
 				(path "/65a6842f-7ce8-4a1d-bd27-c5cbbec442dc/581af204-107c-47d6-980c-6156cf0eb65e"
 					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Audio:AudioPlug2")
+		(at 172.72 121.92 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ebc7dc95-da5e-4cba-8bab-7f3cadcd374f")
+		(property "Reference" "J23"
+			(at 186.69 120.6499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "6.25 mm Plug"
+			(at 186.69 123.1899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 163.83 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 163.83 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Audio Jack, 2 Poles (Mono / TS)"
+			(at 172.72 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "75028400-3fc1-468f-aa16-d178397d19af")
+		)
+		(pin "T"
+			(uuid "e6b3b058-fc0a-4a66-b034-3e55ea2b5141")
+		)
+		(instances
+			(project "Radio_Interface_Cables"
+				(path "/65a6842f-7ce8-4a1d-bd27-c5cbbec442dc/581af204-107c-47d6-980c-6156cf0eb65e"
+					(reference "J23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Socket")
+		(at 170.18 107.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f89b3db0-1cbf-49c8-b82d-aef7316d5de5")
+		(property "Reference" "J14"
+			(at 171.45 107.9499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PowerPole"
+			(at 171.45 110.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.18 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 170.18 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 170.18 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "357ad214-be4e-4eb6-9f8b-dc48a38d220f")
+		)
+		(pin "2"
+			(uuid "ac51f90f-72d6-4614-93f8-181d8b0c169f")
+		)
+		(instances
+			(project "Radio_Interface_Cables"
+				(path "/65a6842f-7ce8-4a1d-bd27-c5cbbec442dc/581af204-107c-47d6-980c-6156cf0eb65e"
+					(reference "J14")
 					(unit 1)
 				)
 			)

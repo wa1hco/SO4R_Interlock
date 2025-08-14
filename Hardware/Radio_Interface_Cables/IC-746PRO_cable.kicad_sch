@@ -1206,6 +1206,159 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector_Audio:AudioJack2"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "AudioJack2"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Audio Jack, 2 Poles (Mono / TS)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "audio jack receptacle mono phone headphone TS connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Jack*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "AudioJack2_0_1"
+				(rectangle
+					(start -3.81 0)
+					(end -2.54 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -2.54 3.81)
+					(end 2.54 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0.635 -0.635) (xy 1.27 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy -0.635 2.54) (xy -0.635 0) (xy -1.27 -0.635) (xy -1.905 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "AudioJack2_1_1"
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "T"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector_Audio:AudioPlug2"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1407,15 +1560,51 @@
 		)
 		(uuid "ca733d6d-1c2b-4fbe-8629-7e9c1c332adb")
 	)
-	(text "xSEND/"
+	(text "VSEND/"
 		(exclude_from_sim no)
-		(at 112.014 83.058 0)
+		(at 113.03 83.058 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 		(uuid "d05674a3-c4a2-4431-a3f8-030fef4ea1fa")
+	)
+	(no_connect
+		(at 161.29 73.66)
+		(uuid "0dcd4d77-104c-4ab8-8c7f-ed3659807e35")
+	)
+	(no_connect
+		(at 198.12 48.26)
+		(uuid "2387e2a3-d62d-45c4-aad2-2fb44d57f9aa")
+	)
+	(no_connect
+		(at 194.31 73.66)
+		(uuid "3f83caa5-25e4-46f3-84ee-551fc6dd53bc")
+	)
+	(no_connect
+		(at 161.29 71.12)
+		(uuid "49afb9a6-3bee-4745-bc3d-a0416b668996")
+	)
+	(no_connect
+		(at 198.12 50.8)
+		(uuid "4da0f0e2-0066-4269-8939-dba28d5cd385")
+	)
+	(no_connect
+		(at 170.18 58.42)
+		(uuid "5b6ea4dd-9f46-42ed-bcc0-5e74d5d001ca")
+	)
+	(no_connect
+		(at 162.56 50.8)
+		(uuid "6b482a86-40fc-4609-b6ec-1800482f1768")
+	)
+	(no_connect
+		(at 194.31 71.12)
+		(uuid "6ee53f53-d571-4c54-8073-1f989c2e1ec8")
+	)
+	(no_connect
+		(at 162.56 48.26)
+		(uuid "ec0d2fe3-0bdd-4172-91f9-8a61a2c2eeb6")
 	)
 	(wire
 		(pts
@@ -1569,13 +1758,23 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 115.57) (xy 162.56 115.57)
+			(xy 154.94 123.19) (xy 162.56 123.19)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "883eb127-4e34-4297-a591-f3ca7c451bbc")
+	)
+	(wire
+		(pts
+			(xy 154.94 110.49) (xy 170.18 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "887379b6-981a-43be-bef3-d09d0fa54e43")
 	)
 	(wire
 		(pts
@@ -1616,6 +1815,16 @@
 			(type default)
 		)
 		(uuid "baa5ad43-47b6-4474-92e9-26ebc9c12cd4")
+	)
+	(wire
+		(pts
+			(xy 154.94 107.95) (xy 170.18 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c30cd6f0-2134-4ac2-a24f-7c2d56314391")
 	)
 	(wire
 		(pts
@@ -1679,7 +1888,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 120.65) (xy 162.56 120.65)
+			(xy 154.94 128.27) (xy 162.56 128.27)
 		)
 		(stroke
 			(width 0)
@@ -3405,7 +3614,7 @@
 		(uuid "0d2b983d-40ae-4ede-a73c-8a3f351be828")
 	)
 	(label "CAT"
-		(at 158.75 115.57 0)
+		(at 156.21 123.19 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3453,6 +3662,16 @@
 			(justify left bottom)
 		)
 		(uuid "3586337f-6d7e-43fe-b75a-d638c93efe07")
+	)
+	(label "PTT{slash}"
+		(at 156.21 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3631d044-24fc-430c-9c04-badba2b80efa")
 	)
 	(label "HSEND{slash}"
 		(at 186.69 73.66 0)
@@ -3513,6 +3732,16 @@
 			(justify left bottom)
 		)
 		(uuid "520e2496-b7b1-49dd-a445-a41c6a173611")
+	)
+	(label "GND"
+		(at 156.21 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "60642873-bd34-41c2-aebf-4435eb177537")
 	)
 	(label "GND"
 		(at 96.52 81.28 0)
@@ -3715,7 +3944,7 @@
 		(uuid "faa89ef9-b1f2-4ffe-a5ab-1fb7a2572981")
 	)
 	(label "GND"
-		(at 158.75 120.65 0)
+		(at 156.21 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3725,17 +3954,16 @@
 		(uuid "faf5c2c4-58c2-43d8-b87f-b46334a63488")
 	)
 	(symbol
-		(lib_id "Connector_Audio:AudioPlug2")
-		(at 177.8 118.11 180)
+		(lib_id "Connector_Audio:AudioJack2")
+		(at 175.26 107.95 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3fcfbdf2-12ed-422f-b991-316975351ca4")
-		(property "Reference" "J12"
-			(at 191.77 116.8399 0)
+		(uuid "1d8f4531-2bc0-4e72-af43-963bbfb5f807")
+		(property "Reference" "J19"
+			(at 180.34 109.8551 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3743,8 +3971,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "3.5 mm Plug"
-			(at 191.77 119.3799 0)
+		(property "Value" "6.25 mm jack"
+			(at 180.34 107.3151 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3753,7 +3981,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 168.91 116.84 0)
+			(at 175.26 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3762,7 +3990,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 168.91 116.84 0)
+			(at 175.26 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3771,7 +3999,77 @@
 			)
 		)
 		(property "Description" "Audio Jack, 2 Poles (Mono / TS)"
-			(at 177.8 118.11 0)
+			(at 175.26 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "S"
+			(uuid "4aeee56b-c9fd-4254-9364-f6b5b7ed3e4a")
+		)
+		(pin "T"
+			(uuid "74917870-99c5-421d-942c-8067d30b0ac2")
+		)
+		(instances
+			(project ""
+				(path "/65a6842f-7ce8-4a1d-bd27-c5cbbec442dc/fcfd43f8-6244-4e92-81b0-daf6ea50b53f"
+					(reference "J19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Audio:AudioPlug2")
+		(at 177.8 125.73 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3fcfbdf2-12ed-422f-b991-316975351ca4")
+		(property "Reference" "J12"
+			(at 191.77 124.4599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "3.5 mm Plug"
+			(at 191.77 126.9999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 168.91 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 168.91 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Audio Jack, 2 Poles (Mono / TS)"
+			(at 177.8 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
