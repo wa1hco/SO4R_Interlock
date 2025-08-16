@@ -1409,7 +1409,7 @@
 	)
 	(text "Elecraft K3S"
 		(exclude_from_sim no)
-		(at 165.608 48.768 0)
+		(at 165.608 53.848 0)
 		(effects
 			(font
 				(size 3 3)
@@ -1419,7 +1419,7 @@
 	)
 	(text "Interlock      Radio"
 		(exclude_from_sim no)
-		(at 105.156 67.818 0)
+		(at 124.206 67.818 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1439,7 +1439,7 @@
 	)
 	(text "KEY/"
 		(exclude_from_sim no)
-		(at 112.014 83.058 0)
+		(at 131.064 83.058 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1448,7 +1448,7 @@
 		(uuid "d05674a3-c4a2-4431-a3f8-030fef4ea1fa")
 	)
 	(no_connect
-		(at 118.11 88.9)
+		(at 137.16 88.9)
 		(uuid "0a343999-0f07-403f-b065-4c88f885585e")
 	)
 	(no_connect
@@ -1480,7 +1480,7 @@
 		(uuid "8141fb8f-e904-46b6-93b0-6e2fcbcbb329")
 	)
 	(no_connect
-		(at 118.11 73.66)
+		(at 137.16 73.66)
 		(uuid "87aba696-b75e-4870-a325-0d04e894e1b0")
 	)
 	(no_connect
@@ -1488,11 +1488,11 @@
 		(uuid "8e59132e-6c3e-4b68-a30c-83ec0d66bf18")
 	)
 	(no_connect
-		(at 167.64 48.26)
+		(at 167.64 53.34)
 		(uuid "a70eae0e-c2d9-4b2e-9d3b-1dd2cd53bf5f")
 	)
 	(no_connect
-		(at 118.11 71.12)
+		(at 137.16 71.12)
 		(uuid "b77a1173-13eb-401f-8b0e-d6bd9708c61c")
 	)
 	(no_connect
@@ -1539,7 +1539,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 83.82) (xy 118.11 83.82)
+			(xy 114.3 83.82) (xy 137.16 83.82)
 		)
 		(stroke
 			(width 0)
@@ -1559,7 +1559,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 71.12) (xy 118.11 71.12)
+			(xy 114.3 71.12) (xy 137.16 71.12)
 		)
 		(stroke
 			(width 0)
@@ -1569,7 +1569,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 76.2) (xy 118.11 76.2)
+			(xy 114.3 76.2) (xy 137.16 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1609,7 +1609,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 81.28) (xy 118.11 81.28)
+			(xy 114.3 81.28) (xy 137.16 81.28)
 		)
 		(stroke
 			(width 0)
@@ -1659,7 +1659,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 73.66) (xy 118.11 73.66)
+			(xy 114.3 73.66) (xy 137.16 73.66)
 		)
 		(stroke
 			(width 0)
@@ -1679,7 +1679,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 86.36) (xy 118.11 86.36)
+			(xy 114.3 86.36) (xy 137.16 86.36)
 		)
 		(stroke
 			(width 0)
@@ -1689,7 +1689,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 78.74) (xy 118.11 78.74)
+			(xy 114.3 78.74) (xy 137.16 78.74)
 		)
 		(stroke
 			(width 0)
@@ -1769,7 +1769,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 88.9) (xy 118.11 88.9)
+			(xy 114.3 88.9) (xy 137.16 88.9)
 		)
 		(stroke
 			(width 0)
@@ -1798,7 +1798,7 @@
 		(uuid "f42dbbff-0058-47c3-8a0c-65670991af92")
 	)
 	(image
-		(at 57.785 78.105)
+		(at 76.835 78.105)
 		(scale 1.14669)
 		(uuid "880b5777-818e-4c76-ba52-67b914e5578f")
 		(data "iVBORw0KGgoAAAANSUhEUgAAAXkAAAEJCAYAAABxIVf8AAAABHNCSVQICAgIfAhkiAAAABl0RVh0"
@@ -3495,7 +3495,7 @@
 		)
 	)
 	(label "GND"
-		(at 96.52 76.2 0)
+		(at 115.57 76.2 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3535,7 +3535,7 @@
 		(uuid "18bcdc33-6a4d-4dbe-b1f0-04e1fe0157fb")
 	)
 	(label "SPR"
-		(at 96.52 88.9 0)
+		(at 115.57 88.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3545,7 +3545,7 @@
 		(uuid "22e8b349-7308-47f9-9dc4-e85ccfe81f53")
 	)
 	(label "PTT{slash}"
-		(at 96.52 78.74 0)
+		(at 115.57 78.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3565,7 +3565,7 @@
 		(uuid "4a0fbda2-95a0-4a25-a1ea-8d3c61eebd7e")
 	)
 	(label "GND"
-		(at 109.22 86.36 0)
+		(at 128.27 86.36 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3615,7 +3615,7 @@
 		(uuid "6aea4b56-e340-4cb2-a0dd-e3ea1e1e3fec")
 	)
 	(label "GND"
-		(at 96.52 81.28 0)
+		(at 115.57 81.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3625,7 +3625,7 @@
 		(uuid "879a7fef-56da-4ffa-8de7-84499154e0bb")
 	)
 	(label "GND"
-		(at 109.22 81.28 0)
+		(at 128.27 81.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3645,7 +3645,7 @@
 		(uuid "8c9ba483-8b1c-4dd8-9409-a7eb9cb2f527")
 	)
 	(label "PTT{slash}"
-		(at 109.22 78.74 0)
+		(at 128.27 78.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3675,7 +3675,7 @@
 		(uuid "90f79407-92fc-4576-88df-57cb79e2b635")
 	)
 	(label "GND"
-		(at 109.22 76.2 0)
+		(at 128.27 76.2 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3685,7 +3685,7 @@
 		(uuid "9a8efbed-d6f4-46c9-a75c-3c43d8f2d895")
 	)
 	(label "12V"
-		(at 96.52 71.12 0)
+		(at 115.57 71.12 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3755,7 +3755,7 @@
 		(uuid "c3a87c75-033e-4ae6-900a-4d909396b93b")
 	)
 	(label "KEY{slash}"
-		(at 96.52 83.82 0)
+		(at 115.57 83.82 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3765,7 +3765,7 @@
 		(uuid "c5a5d6be-37ce-4b3c-b80e-a6282b676785")
 	)
 	(label "CAT"
-		(at 96.52 73.66 0)
+		(at 115.57 73.66 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3805,7 +3805,7 @@
 		(uuid "e41ec594-ef44-4a0d-845a-735650e5d0c5")
 	)
 	(label "GND"
-		(at 96.52 86.36 0)
+		(at 115.57 86.36 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3823,76 +3823,6 @@
 			(justify left bottom)
 		)
 		(uuid "fdc48350-9cf3-4599-9ced-c50bcb747a8a")
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x02_Socket")
-		(at 49.53 101.6 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d1bd3962-964a-4b0f-85e9-62e98e378f00")
-		(property "Reference" "J15"
-			(at 50.8 101.5999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Conn_01x02_Socket"
-			(at 50.8 104.1399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 49.53 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 49.53 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 49.53 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a680ced3-3059-4a80-8e44-88bee0287ff3")
-		)
-		(pin "2"
-			(uuid "3d6083b3-d4a7-4ee8-8784-d8ed39e8d419")
-		)
-		(instances
-			(project ""
-				(path "/65a6842f-7ce8-4a1d-bd27-c5cbbec442dc/581af204-107c-47d6-980c-6156cf0eb65e"
-					(reference "J15")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Connector_Audio:AudioJack2")
@@ -4212,7 +4142,7 @@
 	)
 	(symbol
 		(lib_id "Connector:RJ45")
-		(at 85.09 78.74 0)
+		(at 104.14 78.74 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4221,7 +4151,7 @@
 		(dnp no)
 		(uuid "f9142276-05ab-4774-9bd5-fa9e42803846")
 		(property "Reference" "J6"
-			(at 85.09 96.52 0)
+			(at 104.14 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4229,7 +4159,7 @@
 			)
 		)
 		(property "Value" "RJ45"
-			(at 85.09 93.98 0)
+			(at 104.14 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4237,7 +4167,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 85.09 79.375 90)
+			(at 104.14 79.375 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4246,7 +4176,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 85.09 79.375 90)
+			(at 104.14 79.375 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4255,7 +4185,7 @@
 			)
 		)
 		(property "Description" "RJ connector, 8P8C (8 positions 8 connected)"
-			(at 85.09 78.74 0)
+			(at 104.14 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)

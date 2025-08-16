@@ -116,7 +116,7 @@
 #define DENPIN      PIN_PB5    // Data Enable
 #define DSEL0PIN    PIN_PC0    // Data Select
 #define DSEL1PIN    PIN_PC1     
-#define ISPIN       PIN_PE0    // Analog from BTS5300
+#define ISPIN       PIN_PE1    // Analog from BTS5300
 
 // Public function
 void ConfigPins();

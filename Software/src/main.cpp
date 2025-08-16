@@ -92,7 +92,7 @@ void setup() {
     // defaults for the relay driver diagnostic function
     digitalWrite( DSEL0PIN,   false);
     digitalWrite( DSEL1PIN,   false);
-    digitalWrite( DENPIN,     false);
+    digitalWrite( DENPIN,     true);
   }
 }
 
@@ -107,16 +107,16 @@ void setup() {
 // Operation
 //   Read RTS and KEY IO and save to variables for speed
 //   Compute the Priority from all Tx requests
-//   Assert PTT to radio if RTS asserted and highest priority
-//   Assert RLY to relays if KEY asserted and highest priority
-//   Assert TX led to radio interface if KEY and highest priority 
-//   Assert Inhibit LED to radio interface if KEY asserted and not highest priority
+//   Assert PTT to radio if RTS asserted for WSJTX radios and highest priority
+//   Assert RLY to relays if KEY asserted from SSB/CW radio
+//   Assert green led to radio interface if PTT and highest priority 
+//   Assert yellow LED to radio interface if KEY asserted or PTT and not highest priority
 
 // Explicit sequencing operation not need in Interlock
 //   Rx to Tx
 //     On assertion of PTT, KEY output from radio asserted immediately
 //     Radio delays RF output to allow relays connected to KEY to operate
-//     Interlock picks up PTT or KEY and immediately asserts relays
+//     Interlock picks up RTS for WSJT or KEY from SSB/CW and immediately asserts relays
 //     Relays controlled by Interlock are no different from conventional amplifier
 //     Radio delays RF, so no sequencing steps needed for Rx to Tx
 //   Tx to Rx
@@ -125,6 +125,12 @@ void setup() {
 //     KEY released immediately
 //     Interlock releases relays immediately
 //     Relays hold for few msec, so not hot switched on release of PTT
+
+// Corner case
+//  Operator presses Tx button on WSJT radio
+//    radio will go into transmit
+//    Interlock see the KEY lights the yellow LED on the rig RJ45
+//    Transfer relays remain in pass thru to antenna
 
 // Timing of Interlock software
 //   On every pass through loop() function
@@ -154,13 +160,10 @@ void setup() {
 //       KEY release may be delayed by slow pullup of open collector design
 //       KEY may come from from manual activation of PTT, VOX, CW, Tune, etc.
 //       KEY is masked by priority and routed to each relay
-
-
 void loop() {
   int Priority;
 
-  // Read all inputs, convert from low true to high true logic
-  // Read as atomically as practicable
+// Read all inputs, invert from low true to high true logic
   bool RTS1 = !digitalRead(RTS1nPIN);  // RTS from serial port asks for Tx
   bool RTS2 = !digitalRead(RTS2nPIN);
   bool RTS3 = !digitalRead(RTS3nPIN);
@@ -171,37 +174,19 @@ void loop() {
   bool KEY3 = !digitalRead(KEY3nPIN);
   bool KEY4 = !digitalRead(KEY4nPIN);
 
-  
-  #if 0 //idagnostics
-  digitalWrite(RIG1GRNPIN, RTS1);
-  digitalWrite(RIG2GRNPIN, RTS2);
-  digitalWrite(RIG3GRNPIN, RTS3);
-  digitalWrite(RIG4GRNPIN, RTS4);
-
-  digitalWrite(RIG1YELPIN, KEY1);
-  digitalWrite(RIG2YELPIN, KEY2);
-  digitalWrite(RIG3YELPIN, KEY3);
-  digitalWrite(RIG4YELPIN, KEY4);
-  #endif 
-
-  // Priority initialized to 0 (Rx)
-  // Priority 1 (highest) radio is usually SSB/CW, commanded to Tx by VOX or CW
-  // Priority 2, 3, 4 radios are usually WSJTX, commanded to Tx by RTS\
-  // Interlock also reads the KEY\ line from the radio to sense Tx
-
-  // Compute Priority based on RTS and KEY inputs
-  // Priorities tested from lowest to highest
-  // Highest priority sets final value of Priority
+ // Compute Priority based on RTS and KEY inputs
   // If no Tx requests, remains at 0 (Rx)
   Priority = 0;                    // Rx mode
   if (RTS4 or KEY4) Priority = 4;  // WSJTX radio
   if (RTS3 or KEY3) Priority = 3;  // WSJTX radio
   if (RTS2 or KEY2) Priority = 2;  // WSJTX radio
   if (RTS1 or KEY1) Priority = 1;  // SSB/CW radio
-  
+
   // Output signals in order of timing criticality
-  // Assert Tx to relay corresponding to priority set from RTS and KEY, others stay Rx
-  // Relays asseted on either RTS or KEY inputs
+
+   // Assert Tx to relays 
+  // Use priority set from RTS and KEY
+  // Relays asserted if either RTS or KEY input and priority
   bool RLY1 = (Priority == 1);
   bool RLY2 = (Priority == 2);
   bool RLY3 = (Priority == 3);
@@ -211,7 +196,7 @@ void loop() {
   digitalWrite(RLY3PIN, RLY3);
   digitalWrite(RLY4PIN, RLY4);
 
-  // Asserts Tx on radio with RTS and corresponding to priority, all others stay Rx
+ // Assert PTT to radios with RTS and corresponding to priority, all others stay Rx
   // PTT asserted only on RTS and priority, do not use KEY
   bool PTT1 = RTS1 and (Priority == 1);
   bool PTT2 = RTS2 and (Priority == 2);
@@ -222,13 +207,13 @@ void loop() {
   digitalWrite(PTT3PIN, PTT3);
   digitalWrite(PTT4PIN, PTT4);
 
-  // Assert Tx LED to RJ45 LED same as relays
+  // Assert Rig RJ45 Green LED if rig is transmitting
   digitalWrite(RIG1GRNPIN,  RLY1);
   digitalWrite(RIG2GRNPIN,  RLY2);
   digitalWrite(RIG3GRNPIN,  RLY3);
   digitalWrite(RIG4GRNPIN,  RLY4);
 
-  // Assert Inhibit LED to RJ45 LED if radio want Tx but not highest priority
+  // Assert Rig RJ45 Yellow LED if radio wants Tx but not highest priority
   bool INH2 = (RTS2 or KEY2) and (Priority > 0) and (Priority < 2);
   bool INH3 = (RTS3 or KEY3) and (Priority > 0) and (Priority < 3);
   bool INH4 = (RTS4 or KEY4) and (Priority > 0) and (Priority < 4);
@@ -236,13 +221,9 @@ void loop() {
   digitalWrite(RIG3YELPIN, INH3);
   digitalWrite(RIG4YELPIN, INH4);
 
+  // Assert Relay RJ45 Green LED if any rig transmitting
+  // Assert Relay RJ45 Yellow LED if any rig inhibited
   digitalWrite(RLYGRNPIN, RLY1 or RLY2 or RLY3 or RLY4);
   digitalWrite(RLYYELPIN, INH2 or INH3 or INH4);
 
-  // print if state change
-  //Serial.printf("%i%i%i%i%i%i%i%i\n", RTS1, RTS2, RTS3, RTS4, KEY1, KEY2, KEY3, KEY4);
-  //delay(100);
-
-} // loop()
-
-// put function definitions here:
+} 
