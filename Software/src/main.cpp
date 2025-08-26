@@ -93,7 +93,7 @@ void setup() {
     // defaults for the relay driver diagnostic function
     digitalWrite( DSEL0PIN,   false);
     digitalWrite( DSEL1PIN,   false);
-    digitalWrite( DENPIN,     true);
+    digitalWrite( DENPIN,     false);
   }
 }
 
