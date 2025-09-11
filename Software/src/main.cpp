@@ -101,7 +101,7 @@ void setup() {
 //   RTS\ from USB, when WSJTX wants to transmit
 //   KEY\ from radio, when radio keyed by PTT or manually
 // Outputs
-//   PTT to radio, when needing to transmit and highest priority
+//   PTT to radio, when needing to transmit and highest prioritys
 //   RLYn to relays, when controlling which radio uses amplifier
 //   TX LED, on RJ45 connector for each radio interface, indicates TX and has amplifier
 //   INH LED, on RJ45 connector for each radio interface, indicates wants to TX but not highest priority
