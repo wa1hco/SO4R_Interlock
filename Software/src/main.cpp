@@ -161,7 +161,7 @@ void loop() {
   // RTS1 not used to prevent keying on programming or serial I/O
   bool RTS2 = !digitalRead(RTS2nPIN); // RTS from serial port asks for Tx
   bool RTS3 = !digitalRead(RTS3nPIN);
-  bool RTS4 = !digitalRead(RTS4nPIN);  
+  //bool RTS4 = !digitalRead(RTS4nPIN);  
 
   // KEY 2,3,4
   //    Not used for relays to prevent sequencing error if operator presses TX on radio
@@ -169,12 +169,12 @@ void loop() {
   bool KEY1 = !digitalRead(KEY1nPIN); // KEY from radio says Tx from RTS or manual
   bool KEY2 = !digitalRead(KEY2nPIN); // KEY from radio says Tx from RTS or manual
   bool KEY3 = !digitalRead(KEY3nPIN); // KEY from radio says Tx from RTS or manual
-  bool KEY4 = !digitalRead(KEY4nPIN); // KEY from radio says Tx from RTS or manual
+  //bool KEY4 = !digitalRead(KEY4nPIN); // KEY from radio says Tx from RTS or manual
 
   // Compute Priority based on RTS and KEY inputs
   // If no Tx requests, remains at 0 (Rx)
   Priority = 0;            // Rx mode
-  if (RTS4) Priority = 4;  // WSJTX radio
+  //if (RTS4) Priority = 4;  // WSJTX radio
   if (RTS3) Priority = 3;  // WSJTX radio
   if (RTS2) Priority = 2;  // WSJTX radio
   if (KEY1) Priority = 1;  // SSB/CW radio
@@ -187,40 +187,41 @@ void loop() {
   bool RLY1 = (Priority == 1);
   bool RLY2 = (Priority == 2);
   bool RLY3 = (Priority == 3);
-  bool RLY4 = (Priority == 4);
+  //bool RLY4 = (Priority == 4);
   digitalWrite(RLY1PIN, RLY1);
   digitalWrite(RLY2PIN, RLY2);
   digitalWrite(RLY3PIN, RLY3);
-  digitalWrite(RLY4PIN, RLY4);
+  //digitalWrite(RLY4PIN, RLY4);
 
   // Assert PTT to radios with RTS and corresponding to priority, all others stay Rx
   // PTT asserted only on RTS and priority, do not use KEY
   // SSB/CW radio doesn't need PTT from Interlock
   bool PTT2 = RTS2 and (Priority == 2);
   bool PTT3 = RTS3 and (Priority == 3);
-  bool PTT4 = RTS4 and (Priority == 4);
+  //bool PTT4 = RTS4 and (Priority == 4);
+  bool anyRLY = RLY1 or RLY2 or RLY3;
   digitalWrite(PTT2PIN, PTT2);
   digitalWrite(PTT3PIN, PTT3);
-  digitalWrite(PTT4PIN, PTT4);
+  digitalWrite(PTT4PIN, anyRLY);
 
   // Assert Rig RJ45 Green LED if rig is transmitting
   digitalWrite(RIG1GRNPIN,  RLY1);
   digitalWrite(RIG2GRNPIN,  RLY2);
   digitalWrite(RIG3GRNPIN,  RLY3);
-  digitalWrite(RIG4GRNPIN,  RLY4);
+  digitalWrite(RIG4GRNPIN,  anyRLY);
 
   // Assert Rig RJ45 Yellow LED if 
   //  WSJT asking for Tx but not highest priority
   //  Radio indicates KEY without RTS, meaning operator pressed TX button
   bool INH2 = (RTS2 and (Priority > 0) and (Priority < 2)) or (KEY2 and !RTS2);
   bool INH3 = (RTS3 and (Priority > 0) and (Priority < 3)) or (KEY3 and !RTS3);
-  bool INH4 = (RTS4 and (Priority > 0) and (Priority < 4)) or (KEY4 and !RTS4);
+  //bool INH4 = (RTS4 and (Priority > 0) and (Priority < 4)) or (KEY4 and !RTS4);
   digitalWrite(RIG2YELPIN, INH2); 
   digitalWrite(RIG3YELPIN, INH3);
-  digitalWrite(RIG4YELPIN, INH4);
+  //digitalWrite(RIG4YELPIN, INH4);
 
   // Assert Relay RJ45 Green LED if any rig transmitting
   // Assert Relay RJ45 Yellow LED if any rig inhibited
   digitalWrite(RLYGRNPIN, (Priority > 0));
-  digitalWrite(RLYYELPIN, INH2 or INH3 or INH4);
+  digitalWrite(RLYYELPIN, INH2 or INH3); // or INH4);
 } 
