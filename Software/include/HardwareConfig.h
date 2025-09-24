@@ -7,7 +7,7 @@
 //-----|--------|----------|------|-------|--------|-------|-----|--------|--------|
 // Pin | Name   | Function | Free | Power | Serial | ADC   | DAC |  SPI   |  TWI   |
 //-----|--------|----------|------|-------|--------|-------|-----|--------|--------|
-//  1  | PA5    | RIG4GRN  |      |       | 0,rxd  |       |     |        |        |
+//  1  | PA5    |          | PA5  |       | 0,rxd  |       |     |        |        |
 //  2  | PA6    | RTS4\    |      |       | 0,xck  |       |     | 0,MOSI |        |
 //  3  | PA7    | CTS4\    |      |       | 0,xdir |       |     | 0,MISO |        |
 //  4  | PB0    | RTS3\    |      |       | 3,TXD  |       |     | 0,SCK  |        |
@@ -40,14 +40,14 @@
 // 29  | AGND   |          |      | GND   |        |       |     |        |        |
 // 30  | PE0    | PTT2     |      |       | 4,TXD  | AIN8  |     | 0,mosi |        |
 // 31  | PE1    | IS       |      |       | 4,RXD  | AIN9  |     | 0,miso |        |
-// 32  | PE2    | RIG2GRN  |      |       | 4,XCK  | AIN10 |     | 0,sck  |        |
+// 32  | PE2    |          | PE2  |       | 4,XCK  | AIN10 |     | 0,sck  |        |
 // 33  | PE3    | RIG3YEL  |      |       | 4,XDIR | AIN11 |     | 0,ss\  |        |
 // 34  | PF0    | SPR3     |      |       | 2,TXD  |       |     |        |        |
 // 35  | PF1    | KEY3\M   |      |       | 2,RXD  |       |     |        |        |
 // 36  | PF2    | PTT3     |      |       | 2,XCK  |       |     |        | 1,SDA  |
 //-----|--------|----------|------|-------|--------|-------|-----|--------|--------|
 // 37  | PF3    |          | PF3  |       | 2,XDIR |       |     |        | 1,SCL  |
-// 38  | PF4    | RIG3GRN  |      |       | 2,txd  |       |     |        |        |
+// 38  | PF4    |          | PF4  |       | 2,txd  |       |     |        |        |
 // 39  | PF5    | RIG4YEL  |      |       | 2,rxd  |       |     |        |        |
 // 40  | PF6    | RESET    |      | RESET |        |       |     |        |        |
 // 41  | UPDI   | UPDI     |      | UPDI  |        |       |     |        |        |
@@ -91,16 +91,17 @@
 #define SPR4PIN     PIN_PA2    // 46
 
 // Define LEDs on RJ-45 rig interface jack
+// Green LEDs for each radio mean radio transmitting
+// Radio 1 (SSB/CW) indication comes from its KEY output
+// Radios 2, 3, 4 (FT8) come from the PTT lines
 //      PinName     Port Name  TQFP48  Function
-#define RIG1YELPIN  PIN_PD0    // 20   output, high true, radio keyed
+#define RIG1GRNPIN  PIN_PD4    // 24   output, high true, radio keyed
+
+// Yellow LEDs for each radio mean radio wants to Tx but inhibited
+#define RIG1YELPIN  PIN_PD0    // 20   output, high true, radio inhibited
 #define RIG2YELPIN  PIN_PD5    // 25
 #define RIG3YELPIN  PIN_PE3    // 33
 #define RIG4YELPIN  PIN_PF5    // 39
-
-#define RIG1GRNPIN  PIN_PD4    // 24   output, high true, radio inhibited
-#define RIG2GRNPIN  PIN_PE2    // 32
-#define RIG3GRNPIN  PIN_PF4    // 38
-#define RIG4GRNPIN  PIN_PA5    //  1
 
 // Define connection to relays
 #define RLY1PIN     PIN_PC3    // 13   output, high true
