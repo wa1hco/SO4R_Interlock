@@ -29,3 +29,9 @@ fp-info-cache
 # Exported BOM files
 *.xml
 *.csv
+
+# jlcpcb generated files
+*.gbr
+*.drl
+Hardware/Transfer_Switch_Quad/jlcpcb/
+Hardware/Transfer_Switch_Quad/*.pdf
