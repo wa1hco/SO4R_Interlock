@@ -3,7 +3,7 @@
 Quick reference for **setting up, debugging, and operating** the SO4R Interlock during a
 contest. Two reference sections:
 
-- **[RJ45 LED indicators](#rj45-led-indicators)** — what the front-of-board lights mean.
+- **[RJ45 LED indicators](#rj45-led-indicators)** — what the RJ45 connector-side LEDs mean.
 - **[Radio interface cables](#radio-interface-cables)** — per-cable pinouts.
 
 For the full design rationale see the top-level `README.md` and the design presentation.
@@ -34,6 +34,12 @@ Active-low signals are written with a trailing `/` (in the raw KiCad files: `{sl
 Each RJ45 jack has **two LEDs — green and yellow**. There are **four radio ports**
 (RIG1–RIG4, one per radio cable) and **one relay/transfer port** (RLY, the cable to the
 relay box).
+
+![SO4R Interlock RJ45 connector-side diagram](SO4R_Interlock_Front_Panel_Diagram.svg)
+
+This diagram shows the **RJ45 connector side** of the board; the opposite side contains
+USB, computer, and power interfaces.
+
 
 **At power-on** a **ripple "lamp test"** runs across every LED — yellow then green, relay
 port first, then each radio port in turn — then all go dark. Seeing the sweep confirms the
