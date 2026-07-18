@@ -1,4 +1,4 @@
-(footprint "UHF_SO-239"
+(footprint "UHF_SO-239_Pin"
 	(version 20241229)
 	(generator "pcbnew")
 	(generator_version "9.0")
@@ -16,7 +16,7 @@
 			)
 		)
 	)
-	(property "Value" "UHF_SO-239"
+	(property "Value" "UHF_SO-239_Pin"
 		(at 0 14.6 0)
 		(layer "F.Fab")
 		(hide yes)
@@ -150,12 +150,13 @@
 			)
 		)
 	)
-	(pad "" np_thru_hole circle
-		(at 0 0)
-		(size 16.8 16.8)
-		(drill 15.7)
-		(layers)
-		(uuid "00584c3d-1eda-4d4d-9f12-f3f5b698d60d")
+	(pad "1" thru_hole circle
+		(at 0.025 0.025)
+		(size 6.5 6.5)
+		(drill 4.15)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ecc37d87-4568-4016-8299-5c85397664be")
 	)
 	(pad "2" thru_hole circle
 		(at -9 -9)
@@ -163,15 +164,8 @@
 		(drill 3.5)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(zone_connect 2)
 		(uuid "553b2698-79f2-4522-9029-f003906cce61")
-	)
-	(pad "2" thru_hole circle
-		(at -9 0)
-		(size 1 1)
-		(drill 0.6)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(uuid "366a117d-222e-43d2-a29b-364015c606e1")
 	)
 	(pad "2" thru_hole circle
 		(at -9 9)
@@ -179,6 +173,7 @@
 		(drill 3.5)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(zone_connect 2)
 		(uuid "38c6e9b8-e5a9-4233-ac52-df246803490f")
 	)
 	(pad "2" thru_hole circle
@@ -196,30 +191,43 @@
 		(drill 0.6)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(zone_connect 2)
 		(uuid "86cd5668-c6e9-4fe5-a655-3822b89f862a")
 	)
 	(pad "2" thru_hole circle
-		(at -3.3 8.5)
+		(at -3.5 -8.3 180)
 		(size 1 1)
 		(drill 0.6)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(zone_connect 2)
+		(uuid "9c04e47b-50fc-40c9-9497-e031de96a484")
+	)
+	(pad "2" thru_hole circle
+		(at -3.3 8.425)
+		(size 1 1)
+		(drill 0.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(zone_connect 2)
 		(uuid "3c31287d-487c-4001-bcf9-67111d7da782")
 	)
 	(pad "2" thru_hole circle
-		(at 0 9.1)
+		(at 3.3 -8.4 180)
 		(size 1 1)
 		(drill 0.6)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "65c9d4b1-d073-45e6-af2b-7f25776c1621")
+		(zone_connect 2)
+		(uuid "d098a840-dc85-48c1-a117-083199c8efc4")
 	)
 	(pad "2" thru_hole circle
-		(at 3.5 8.4)
+		(at 3.5 8.325)
 		(size 1 1)
 		(drill 0.6)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(zone_connect 2)
 		(uuid "f43f698e-354d-49ee-b957-40f3fc6c438d")
 	)
 	(pad "2" thru_hole circle
@@ -228,6 +236,7 @@
 		(drill 0.6)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(zone_connect 2)
 		(uuid "36fe478a-c13e-4a47-9c5f-b7d8bd43e4fa")
 	)
 	(pad "2" thru_hole circle
@@ -236,6 +245,7 @@
 		(drill 0.6)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(zone_connect 2)
 		(uuid "8f0a277c-5030-4e48-b295-0e15b5c17bf7")
 	)
 	(pad "2" thru_hole circle
@@ -244,15 +254,8 @@
 		(drill 3.5)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(zone_connect 2)
 		(uuid "09bb4c5e-0523-413a-ae83-69cfbb03e57f")
-	)
-	(pad "2" thru_hole circle
-		(at 9 0)
-		(size 1 1)
-		(drill 0.6)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(uuid "1492886f-1d48-47e8-8f7e-fee239dd2ce3")
 	)
 	(pad "2" thru_hole circle
 		(at 9 9)
@@ -260,6 +263,7 @@
 		(drill 3.5)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(zone_connect 2)
 		(uuid "ad321e22-5d9f-43e8-83ed-5d24eff71344")
 	)
 	(embedded_fonts no)

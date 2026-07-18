@@ -104,16 +104,18 @@ void setup() {
 //   PTT to radio, when needing to transmit and highest prioritys
 //   RLYn to relays, when controlling which radio uses amplifier
 //   TX LED, on RJ45 connector for each radio interface, indicates TX and has amplifier
-//   INH LED, on RJ45 connector for each radio interface, indicates wants to TX but not highest priority
+//   INH LED, on RJ45 connector for each radio interface, indicates wants to TX but outranked, or manual TX (KEY without RTS)
 // Operation
 //   Read RTS and KEY IO and save to variables for speed
 //   Compute the Priority from all Tx requests
-//   Assert PTT to radio if RTS asserted for WSJTX radios and highest priority
-//   Assert RLY to relays if KEY asserted from SSB/CW radio
-//   Assert green led to radio interface if PTT and highest priority 
-//   Assert yellow LED to radio interface if KEY asserted or PTT and not highest priority
+//   Assert PTT to radio if RTS asserted from WSJTX (radio 2, 3, 4) and highest priority
+//   Assert RLY to relays if KEY asserted from SSB/CW ( radio 1)
+//   Assert green LED to radio interface when this radio holds priority and the relays/amplifier (RLYn)
+//   Assert yellow LED to radio interface (radios 2-4) when a WSJT radio wants Tx but is
+//     outranked by a higher priority radio, or asserts KEY without RTS (manual Tx)
 
 // Explicit sequencing operation not need in Interlock
+//   Why the Interlock is not a sequencing controller
 //   Rx to Tx
 //     On assertion of PTT, KEY output from radio asserted immediately
 //     Radio delays RF output to allow relays connected to KEY to operate
@@ -128,7 +130,8 @@ void setup() {
 //     Relays hold for few msec, so not hot switched on release of PTT
 
 // Corner case
-//  Operator presses Tx button on WSJT radio
+//  Operator presses Tx button on WSJT radio (radios 2, 3, 4)
+//    Radio asserts the KEY line which interlock sees as Tx request, but no RTS from USB
 //    Radio goes into transmit, but not allowed to use amplifier or relays
 //    Interlock see the KEY and lights the yellow LED on the radio RJ45
 //    Transfer relays remain in pass thru to antenna
